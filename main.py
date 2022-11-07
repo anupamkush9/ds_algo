@@ -1,6 +1,9 @@
-def fact(n):
+def fibonacci(a, b, n):
     if n==1:
-        return 1
-    return n * fact(n-1)
+        return a + b
+    print(a + b)
+    return fibonacci(b, a+b, n-1)
 
-print(fact(5))
+print(0)
+print(1)
+print(fibonacci(0,1,5))
