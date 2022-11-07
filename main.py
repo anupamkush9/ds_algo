@@ -1,6 +1,6 @@
-def rev(s):
-    if len(s)==1:
-        return s
-    return s[-1]+rev(s[:-1])
+def fact(n):
+    if n==1:
+        return 1
+    return n * fact(n-1)
 
-print(rev("Anupam"))
+print(fact(5))
