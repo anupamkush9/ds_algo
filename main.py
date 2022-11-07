@@ -1,7 +1,5 @@
-def sum_of_num(n):
-    if n == 1:
-        return n
-    else:
-        return n + sum_of_num(n-1)
-
-print(sum_of_num(5))
+def rev(s):
+    if len(s)==1:
+        return s
+    return s[-1]+rev(s[:-1])
+print(rev("Anupam"))
