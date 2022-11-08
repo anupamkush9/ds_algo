@@ -1,9 +1,18 @@
-def fibonacci(a, b, n):
-    if n==1:
-        return a + b
-    print(a + b)
-    return fibonacci(b, a+b, n-1)
 
-print(0)
-print(1)
-print(fibonacci(0,1,5))
+def palindrom(s):
+    if len(s) == 1:
+        return s
+    return s[-1] + palindrom(s[:-1])
+
+s = input()
+if s == palindrom(s):
+    print("Palindrome No")
+else:
+    print("Not Palindrome No")
+
+
+
+
+
+
+
