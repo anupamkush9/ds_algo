@@ -1,14 +1,6 @@
-# program for GCD ( Greatest Common Divisor )
-def GCD(num1, num2):
-    if num1 > num2:
-        if num1 % num2 != 0:
-            return GCD(num2, (num1%num2))
-        else:
-            return num2
-    else:
-        if num2 % num1 != 0:
-            return GCD(num1, (num2%num1))
-        else:
-            return num1
-
-print(GCD(10,35))
+# program for Decimal to Binary conversion
+def Decimal_to_Binary(num):
+    if num//2==0:
+        return num
+    return str(Decimal_to_Binary(num//2)) + str(num%2)
+print(Decimal_to_Binary(3))
