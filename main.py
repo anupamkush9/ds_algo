@@ -1,9 +1,19 @@
-def fibonacci(a, b, n):
-    if n==1:
-        return a + b
-    print(a + b)
-    return fibonacci(b, a+b, n-1)
+"""
+isPalindrome
+Write a recursive function called isPalindrome which returns true if the string passed to it is a palindrome (reads the same forward and backward). Otherwise it returns false.
+Examples
+isPalindrome('awesome') # false
+isPalindrome('foobar') # false
+isPalindrome('tacocat') # true
+isPalindrome('amanaplanacanalpanama') # true
+isPalindrome('amanaplanacanalpandemonium') # false
+"""
 
-print(0)
-print(1)
-print(fibonacci(0,1,5))
+def isPalindrome(strng):
+    if len(strng) == 0:
+        return True
+    if strng[0] != strng[len(strng)-1]:
+        return False
+    return isPalindrome(strng[1:-1])
+
+print(isPalindrome("madam"))
