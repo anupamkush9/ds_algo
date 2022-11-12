@@ -1,19 +1,33 @@
-"""
-isPalindrome
-Write a recursive function called isPalindrome which returns true if the string passed to it is a palindrome (reads the same forward and backward). Otherwise it returns false.
-Examples
-isPalindrome('awesome') # false
-isPalindrome('foobar') # false
-isPalindrome('tacocat') # true
-isPalindrome('amanaplanacanalpanama') # true
-isPalindrome('amanaplanacanalpandemonium') # false
-"""
 
-def isPalindrome(strng):
-    if len(strng) == 0:
-        return True
-    if strng[0] != strng[len(strng)-1]:
-        return False
-    return isPalindrome(strng[1:-1])
+array = [1, 2, 3, 4, 5]
 
-print(isPalindrome("madam"))
+######  Constant time complexity  #######
+print('######  Constant time complexity  #######')
+print(array[0])
+
+
+######  Linear time complexity  #######
+print('######  Linear time complexity  #######')
+for element in array:
+     print(element)
+
+
+######  Logarithmic time complexity  #######
+print('######  Logarithmic time complexity  #######')
+for index in range(0,len(array),3):
+     print(array[index])
+
+
+######  Quadratic time complexity  #######
+print('######  Quadratic time complexity  #######')
+for x in array:
+    for y in array:
+         print(x,y)
+
+
+######  Exponential time complexity  #######
+print('######  Exponential time complexity  #######')
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
