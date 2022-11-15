@@ -1,10 +1,11 @@
-def power_of_3(n):
-    if (n == 1):
-        return True
-    if (n % 3 != 0):
-        return False
-    if (n < 3):
-        return False
-    return power_of_3(n // 3)
+class Solution:
+    def isPowerOfFour(self, n: int) -> bool:
+        if (n==1):
+            return True
+        if (n==0):
+            return False
+        if (n%4!=0):
+            return False
+        return self.isPowerOfFour(n//4)
 
-print(power_of_3(81))
+print(Solution().isPowerOfFour(5))
