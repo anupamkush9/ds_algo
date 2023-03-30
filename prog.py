@@ -1,41 +1,22 @@
-import numpy as np
+class Node():
+    def __init__(self, value):
+        self.value = value,
+        self.next = None
 
-twoDArray = np.array([[11, 15, 10, 6], [10, 14, 11, 5], [12, 17, 12, 8], [15, 18, 14, 9] ])
-print(twoDArray)
+class SlinkedList():
+    def __init__(self):
+        self.head = None
+        self.tail = None
 
-print(len(twoDArray))
+slinkedlist_obj = SlinkedList()
+n1 = Node(1)
+n2 = Node(2)
+n3 = Node(3)
+n4 = Node(4)
 
-newTwoDArray = np.append(twoDArray, [[1,2,3,4]], axis=0)
-print(newTwoDArray)
-print(len(newTwoDArray))
-print(len(newTwoDArray[0]))
+slinkedlist_obj.head = n1
+n1.next = n2
+n2.next = n3
+n3.next = n4
+slinkedlist_obj.tail = n4
 
-def accessElements(array, rowIndex, colIndex):
-    if rowIndex >= len(array) and colIndex >= len(array[0]):
-        print('Incorrect Index')
-    else:
-        print(array[rowIndex][colIndex])
-
-accessElements(newTwoDArray, 1, 2)
-
-def traverseTDArray(array):
-    for i in range(len(array)):
-        for j in range(len(array[0])):
-            print(array[i][j])
-
-
-traverseTDArray(twoDArray)
-
-
-def searchTDArray(array, value):
-    for i in range(len(array)):
-        for j in range(len(array[0])):
-            if array[i][j] == value:
-                return 'The value is located index '+str(i)+" "+str(j)
-    return 'The element no found'
-
-
-print(searchTDArray(twoDArray, 444))
-
-newTDArray = np.delete(twoDArray, 1, axis=1)
-print(newTDArray)
