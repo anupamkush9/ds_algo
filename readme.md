@@ -1,7 +1,6 @@
 
 ### 1) blogging-project
 1. [main](https://github.com/anupamkush9/ds_algo/tree/main)
-2. [main](https://github.com/anupamkush9/ds_algo/tree/main)
 
 ---
 
