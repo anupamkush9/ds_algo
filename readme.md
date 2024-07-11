@@ -1,5 +1,5 @@
 
-### 1) blogging-project
+### 1) ds_algo
 1. [main](https://github.com/anupamkush9/ds_algo/tree/main)
 
 ---
