@@ -1,9 +1,12 @@
-def fibonacci(a, b, n):
-    if n==1:
-        return a + b
-    print(a + b)
-    return fibonacci(b, a+b, n-1)
+def check_sorted_array(l):
+    if len(l) == 1:
+        return True
+    if l[0] < l[1]:
+        return check_sorted_array(l[1:])
+    else:
+        return False
 
-print(0)
-print(1)
-print(fibonacci(0,1,5))
+l = [10, 20, 300, 40, 50]
+print(check_sorted_array(l))
+
+
