@@ -20,7 +20,7 @@
 13. [factorial_program_by_recursion](https://github.com/anupamkush9/ds_algo/tree/factorial_program_by_recursion)
 14. [reverse_of_string_by_recursion](https://github.com/anupamkush9/ds_algo/tree/reverse_of_string_by_recursion)
 15. [sum_of_n_natural_no_by_recursion](https://github.com/anupamkush9/ds_algo/tree/sum_of_n_natural_no_by_recursion)
-16. [printnumber_by_recursion](https://github.com/anupamkush9/ds_algo/tree/printnumber_by_recursion)
+16. [printnumber_number_in_increasing_order](https://github.com/anupamkush9/ds_algo/tree/printnumber_number_in_increasing_order)
 17. [recursion_1st_prog_of_number_printing](https://github.com/anupamkush9/ds_algo/tree/recursion_1st_prog_of_number_printing)
 
 
