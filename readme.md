@@ -24,6 +24,7 @@
 17. [recursion_1st_prog_of_number_printing](https://github.com/anupamkush9/ds_algo/tree/recursion_1st_prog_of_number_printing)
 18. [check_if_given_array_is_sorted_or_not_by_recursion](https://github.com/anupamkush9/ds_algo/tree/check_if_given_array_is_sorted_or_not_by_recursion)
 19. [first_occurance_of_number_by_recursion](https://github.com/anupamkush9/ds_algo/tree/first_occurance_of_number_by_recursion)
+20. [last_occurance_of_number_by_recursion](https://github.com/anupamkush9/ds_algo/tree/last_occurance_of_number_by_recursion)
 
 ---
 
