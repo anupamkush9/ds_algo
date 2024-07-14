@@ -35,3 +35,4 @@ l = [10,40,55,0,5]
 merge_sort(l)
 print(l)
 
+# ref : https://www.youtube.com/watch?v=nCNfu_zNhyI&t=353s
