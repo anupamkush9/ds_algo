@@ -26,6 +26,7 @@
 19. [first_occurance_of_number_by_recursion](https://github.com/anupamkush9/ds_algo/tree/first_occurance_of_number_by_recursion)
 20. [last_occurance_of_number_by_recursion](https://github.com/anupamkush9/ds_algo/tree/last_occurance_of_number_by_recursion)
 21. [remove_duplicate_from_string](https://github.com/anupamkush9/ds_algo/tree/remove_duplicate_from_string)
+22. [element_indexes_of_target_element](https://github.com/anupamkush9/ds_algo/tree/element_indexes_of_target_element)
 ---
 
 ### 3) Linked list
