@@ -28,6 +28,7 @@
 21. [remove_duplicate_from_string](https://github.com/anupamkush9/ds_algo/tree/remove_duplicate_from_string)
 22. [element_indexes_of_target_element](https://github.com/anupamkush9/ds_algo/tree/element_indexes_of_target_element)
 23. [find_the_length_of_string](https://github.com/anupamkush9/ds_algo/tree/find_the_length_of_string)
+24. [merge_sort_by_recursion](https://github.com/anupamkush9/ds_algo/tree/merge_sort_by_recursion)
 ---
 
 ### 3) Linked list
