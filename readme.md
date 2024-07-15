@@ -44,3 +44,4 @@
 4. [linear_search_in_array](https://github.com/anupamkush9/ds_algo/tree/linear_search_in_array)
 5. [binary_search](https://github.com/anupamkush9/ds_algo/tree/binary_search)
 6. [reverse_an_array](https://github.com/anupamkush9/ds_algo/tree/reverse_an_array)
+7. [pairs_in_array](https://github.com/anupamkush9/ds_algo/tree/pairs_in_array)
