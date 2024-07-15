@@ -1,4 +1,4 @@
-def largrest_element_in_array(arr):
+def largest_element_in_array(arr):
     largest = arr[0]
     for i in range(len(arr)):
         if largest < arr[i]:
@@ -7,4 +7,4 @@ def largrest_element_in_array(arr):
             
 
 arr = [10,555,55,2,5477]
-print(largrest_element_in_array(arr))
+print(largest_element_in_array(arr))
