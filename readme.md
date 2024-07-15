@@ -40,4 +40,5 @@
 ### 4) Array
 1. [two_d_array_operation](https://github.com/anupamkush9/ds_algo/tree/two_d_array_operation)
 2. [array_operation](https://github.com/anupamkush9/ds_algo/tree/array_operation)
-3. [linear_search_in_array](https://github.com/anupamkush9/ds_algo/tree/linear_search_in_array)
+3. [largest_element_in_array](https://github.com/anupamkush9/ds_algo/tree/largest_element_in_array)
+4. [linear_search_in_array](https://github.com/anupamkush9/ds_algo/tree/linear_search_in_array)
