@@ -1,10 +1,10 @@
-def linear_search(a, target):
-    for index, element in enumerate(a):
-        if element == target:
-            return index
-    else:
-        return -1
+def largrest_element_in_array(arr):
+    largest = arr[0]
+    for i in range(len(arr)):
+        if largest < arr[i]:
+            largest = arr[i]
+    return largest
+            
 
-a = [10,5,55,2,54]
-target = 54
-print(linear_search(a, target))
+arr = [10,555,55,2,5477]
+print(largrest_element_in_array(arr))
