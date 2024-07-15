@@ -1,23 +1,29 @@
-def get_maximum_trapping_water(arr):
-    left_max_boundry = []
-    right_max_boundry = []
-    trapped_water_arr = []
-    for i in range(len(arr)):
-        left_max_boundry.append(max(arr[:i+1]))
-    for i in range(len(arr)):
-        right_max_boundry.append(max(arr[i:]))
-    for i in range(len(arr)):
-        current_water = min(left_max_boundry[i], right_max_boundry[i]) - arr[i]
-        trapped_water_arr.append(current_water)
-    print("left_max_boundry::",left_max_boundry)
-    print("right_max_boundry::",right_max_boundry)
-    print("Initial block arr::",arr)
-    print("trapped_water_arr::",trapped_water_arr)
-    return sum(trapped_water_arr)
+# Python program for the above approach:
 
 
-# arr = [3, 0, 1, 0, 4, 0, 2]
-arr = [3, 0, 2, 0, 4]
-print(get_maximum_trapping_water(arr))
+def maxProfit(prices, n):
+    buy = prices[0]
+    max_profit = 0
+    for i in range(1, n):
 
-# ref : https://www.geeksforgeeks.org/trapping-rain-water/
+        # Checking for lower buy value
+        if (buy > prices[i]):
+            buy = prices[i]
+
+        # Checking for higher profit
+        elif (prices[i] - buy > max_profit):
+            max_profit = prices[i] - buy
+    return max_profit
+
+
+# Driver code
+if __name__ == '__main__':
+
+    prices = [7, 1, 5, 6, 4]
+    n = len(prices)
+    max_profit = maxProfit(prices, n)
+    print(max_profit)
+
+# ref: 
+# https://www.geeksforgeeks.org/best-time-to-buy-and-sell-stock/
+# best time to buy stock
