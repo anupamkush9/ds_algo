@@ -1,14 +1,12 @@
-def binary_search(arr, target):
+def reverse_array(arr):
     start = 0
     end = len(arr) - 1
-    while start <= end:
-        mid = (start + end) // 2
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] < target:
-            start = mid + 1
-        else:
-            end = mid - 1
-    return -1
-
-print(binary_search([0, 5, 12, 77, 88], -4))
+    while(start < end):
+        arr[start], arr[end] = arr[end], arr[start]
+        start += 1
+        end -= 1
+    return arr
+arr = [0, 5, 12, 77, 88, 55]
+print("Before sorting array : ", arr)
+reverse_array(arr)
+print("After sorting array : ", arr)
