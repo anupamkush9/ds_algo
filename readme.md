@@ -45,3 +45,4 @@
 5. [binary_search](https://github.com/anupamkush9/ds_algo/tree/binary_search)
 6. [reverse_an_array](https://github.com/anupamkush9/ds_algo/tree/reverse_an_array)
 7. [pairs_in_array](https://github.com/anupamkush9/ds_algo/tree/pairs_in_array)
+8. [trapping_rain_water](https://github.com/anupamkush9/ds_algo/tree/trapping_rain_water)
