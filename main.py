@@ -13,4 +13,4 @@ print(get_possible_pairs(l, target))
 
 
 # ref
-# https://www.geeksforgeeks.org/container-with-most-water/
+# https://www.geeksforgeeks.org/count-pairs-with-given-sum/
