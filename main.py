@@ -1,16 +1,21 @@
-def get_possible_pairs(arr, target):
-    arr_len = len(arr)
-    count = 0
-    for i in range(arr_len):
-        for j in range(i+1,arr_len):
-            if arr[i]+arr[j] == target:
-                count += 1
-    return count
+def is_possible_pair_exists(arr, target):
+  arr.sort()
+  left = 0
+  right = len(arr) - 1
+
+  while left <= right:
+    current_sum = arr[left] + arr[right]
+    if current_sum == target:
+      return True
+    elif current_sum < target:
+      left += 1
+    else:
+      right -= 1
+
+  return False
 
 l = [1, 5, 7, -1]
 target = 6
-print(get_possible_pairs(l, target))
+print(is_possible_pair_exists(l, target))
 
-
-# ref
-# https://www.geeksforgeeks.org/count-pairs-with-given-sum/
+# Ref : https://www.geeksforgeeks.org/count-pairs-with-given-sum/
