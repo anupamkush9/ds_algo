@@ -47,3 +47,4 @@
 7. [pairs_in_array](https://github.com/anupamkush9/ds_algo/tree/pairs_in_array)
 8. [trapping_rain_water](https://github.com/anupamkush9/ds_algo/tree/trapping_rain_water)
 9. [best_time_to_buy_and_sell_stock](https://github.com/anupamkush9/ds_algo/tree/best_time_to_buy_and_sell_stock)
+10. [container_with_most_water_by_brute_force_approach](https://github.com/anupamkush9/ds_algo/tree/container_with_most_water_by_brute_force_approach)
