@@ -1,21 +1,15 @@
-def container_with_most_water(arr):
-    max_contained_water = 0
-    left = 0
-    right = len(arr)-1
-    while(left < right):
-        height = min(arr[left], arr[right])
-        width = right - left
-        current_water = height * width
-        max_contained_water = max(max_contained_water, current_water)
-        if arr[left] < arr[right]:
-            left += 1
-        else:
-            right -= 1
-    return max_contained_water
+def get_possible_pairs(arr, target):
+    arr_len = len(arr)
+    count = 0
+    for i in range(arr_len):
+        for j in range(i+1,arr_len):
+            if arr[i]+arr[j] == target:
+                count += 1
+    return count
 
-# l = [1, 5, 4, 3]
-l = [3, 1, 2, 4, 5]
-print(container_with_most_water(l))
+l = [1, 5, 7, -1]
+target = 6
+print(get_possible_pairs(l, target))
 
 
 # ref
