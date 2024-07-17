@@ -27,30 +27,47 @@ class LinkedList():
             current = current.next
         print("-->",current.data, end='')
         
-    def reverse_ll_by_stack(self):
-        current = self.head
-        stack = []
-        while current:
-            stack.append(current.data)
-            current = current.next
-        current = self.head
-        while current:
-            current.data = stack.pop()
-            current = current.next
+    def findMid(self):
+        slow = self.head
+        fast = self.head
+        while fast != None and fast.next != None:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
+    
+    def check_is_palindrome(self):
+        midNode = self.findMid()
+        prev = None
+        
+        # reversing half ll
+        while midNode:
+            temp_next = midNode.next
+            midNode.next = prev
+            prev = midNode
+            midNode = temp_next
+        
+        # comparing 1st half ll by 2nd half ll
+        left = self.head
+        right = prev
+        while right.next:
+            if left.data != right.data:
+                return False
+            left = left.next
+            right = right.next
+        return True
+
         
 
 ll = LinkedList()
 ll.insert(10)
 ll.insert(20)
-ll.insert(30)
-ll.insert(40)
-print("===Before reversal=======++>")
-ll.printll()
-ll.reverse_ll_by_stack()
-print("\n===After reversal=======++>")
-ll.printll()
+ll.insert(20)
+ll.insert(10)
+ll.insert(10)
+print(ll.check_is_palindrome())
+
 
     
 
-# Ref : https://takeuforward.org/data-structure/reverse-a-linked-list/
-        # brute force approach implemented
+# Ref : https://takeuforward.org/data-structure/check-if-given-linked-list-is-plaindrome/
+        # Optimal approach implementation
