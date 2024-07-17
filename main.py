@@ -1,16 +1,20 @@
-def nex_greater(l):
-    next_greater_element = []
-    for i in range(len(l)):
-        for j in range(i+1, len(l)):
-            if l[i] < l[j]:
-                next_greater_element.append(l[j])
-                break
+def areBracketsBalanced(brackets):
+    stack = []
+    bracket_pairs = {'[':']','(':')','{':'}'}
+    
+    for bracket in brackets:
+        if bracket in bracket_pairs.keys():
+            stack.append(bracket)
         else:
-            next_greater_element.append(-1)
-    return next_greater_element
-        
-l = [50, 40, 30, 10]
-print(nex_greater(l))
+            if len(stack) == 0:
+                return False
+            elif bracket_pairs.get(stack.pop()) != bracket:
+                return False
+    return len(stack) == 0
 
-# ref : https://www.geeksforgeeks.org/problems/next-larger-element-1587115620/1
-# brute force apporach
+   
+brackets = "[()]{}}{[()()]()}"
+# brackets = "[(])"
+print(areBracketsBalanced(brackets))
+
+# ref : https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
