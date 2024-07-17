@@ -56,6 +56,8 @@
 12. [pair_sum_by_2_pointer_approach](https://github.com/anupamkush9/ds_algo/tree/pair_sum_by_2_pointer_approach)
 13. [next_largest_element_by_brute_force_approach](https://github.com/anupamkush9/ds_algo/tree/next_largest_element_by_brute_force_approach)
 
+---
+
 ### 5) Stack
 1. [reverse_string_by_using_stack](https://github.com/anupamkush9/ds_algo/tree/reverse_string_by_using_stack)
 2. [valid_pair_parentheses](https://github.com/anupamkush9/ds_algo/tree/valid_pair_parentheses)
