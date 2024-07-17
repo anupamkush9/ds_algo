@@ -25,16 +25,16 @@ class LinkedList():
         while current.next:
             print("-->",current.data, end='')
             current = current.next
-        print("-->",current.data)
+        print("-->",current.data, end='')
         
     def reversell(self):
         prev = None
         current = self.head
-        while(current is not None):
-            next = current.next
+        while current:
+            temp_next = current.next
             current.next = prev
             prev = current
-            current = next
+            current = temp_next
         self.head = prev
 
 ll = LinkedList()
