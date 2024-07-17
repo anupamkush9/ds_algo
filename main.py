@@ -1,73 +1,41 @@
+
 class Node:
-    
     def __init__(self, data):
         self.data = data
         self.next = None
-        
-class LinkedList():
-    
-    def __init__(self):
-        self.head = None
-    
-    def insert(self, data):
-        node = Node(data)
-        if self.head == None:
-            self.head = node
-        else:
-            current = self.head
-            while current.next:
-                current = current.next
-            current.next = node
-            
-        
-    def printll(self):
-        current = self.head
-        while current.next:
-            print("-->",current.data, end='')
-            current = current.next
-        print("-->",current.data, end='')
-        
-    def findMid(self):
-        slow = self.head
-        fast = self.head
-        while fast != None and fast.next != None:
-            slow = slow.next
-            fast = fast.next.next
-        return slow
-    
-    def check_is_palindrome(self):
-        midNode = self.findMid()
-        prev = None
-        
-        # reversing half ll
-        while midNode:
-            temp_next = midNode.next
-            midNode.next = prev
-            prev = midNode
-            midNode = temp_next
-        
-        # comparing 1st half ll by 2nd half ll
-        left = self.head
-        right = prev
-        while right.next:
-            if left.data != right.data:
-                return False
-            left = left.next
-            right = right.next
-        return True
 
+def detect_cycle(head):
+    slow = head
+    fast = head
+    while(fast != None and fast.next != None):
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            return True
+    return False
         
+if __name__ == "__main__":
+    # Create a sample linked list with
+    # a loop for testing
+    head = Node(1)
+    second = Node(2)
+    third = Node(3)
+    fourth = Node(4)
+    fifth = Node(5)
 
-ll = LinkedList()
-ll.insert(10)
-ll.insert(20)
-ll.insert(20)
-ll.insert(10)
-ll.insert(10)
-print(ll.check_is_palindrome())
+    head.next = second
+    second.next = third
+    third.next = fourth
+    fourth.next = fifth
+    # Create a loop
+    fifth.next = third
 
+    # Check if there is a loop
+    # in the linked list
+    if detect_cycle(head):
+        print("Loop detected in the linked list.")
+    else:
+        print("No loop detected in the linked list.")
 
-    
-
-# Ref : https://takeuforward.org/data-structure/check-if-given-linked-list-is-plaindrome/
+# Ref : https://takeuforward.org/data-structure/detect-a-cycle-in-a-linked-list/
         # Optimal approach implementation
