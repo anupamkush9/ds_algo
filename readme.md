@@ -59,3 +59,4 @@
 ### 5) Stack
 1. [reverse_string_by_using_stack](https://github.com/anupamkush9/ds_algo/tree/reverse_string_by_using_stack)
 2. [valid_pair_parentheses](https://github.com/anupamkush9/ds_algo/tree/valid_pair_parentheses)
+3. [duplicate_pair_parenthesis](https://github.com/anupamkush9/ds_algo/tree/duplicate_pair_parenthesis)
