@@ -36,6 +36,7 @@
 2. [creation_of_linked_list](https://github.com/anupamkush9/ds_algo/tree/creation_of_linked_list)
 3. [reverse_a_linked_list](https://github.com/anupamkush9/ds_algo/tree/reverse_a_linked_list)
 4. [reverse_linked_list_by_using_stack](https://github.com/anupamkush9/ds_algo/tree/reverse_linked_list_by_using_stack)
+5. [check_is_palindrome_or_mid_of_the_linkedlist](https://github.com/anupamkush9/ds_algo/tree/check_is_palindrome_or_mid_of_the_linkedlist)
 
 ---
 
