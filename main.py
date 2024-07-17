@@ -27,24 +27,30 @@ class LinkedList():
             current = current.next
         print("-->",current.data, end='')
         
-    def reversell(self):
-        prev = None
+    def reverse_ll_by_stack(self):
+        current = self.head
+        stack = []
+        while current:
+            stack.append(current.data)
+            current = current.next
         current = self.head
         while current:
-            temp_next = current.next
-            current.next = prev
-            prev = current
-            current = temp_next
-        self.head = prev
+            current.data = stack.pop()
+            current = current.next
+        
 
 ll = LinkedList()
 ll.insert(10)
 ll.insert(20)
 ll.insert(30)
 ll.insert(40)
-ll.reversell()
+print("===Before reversal=======++>")
+ll.printll()
+ll.reverse_ll_by_stack()
+print("\n===After reversal=======++>")
 ll.printll()
 
     
 
-# Ref : https://www.geeksforgeeks.org/reverse-a-linked-list/
+# Ref : https://takeuforward.org/data-structure/reverse-a-linked-list/
+        # brute force approach implemented
