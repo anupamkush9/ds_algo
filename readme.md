@@ -34,6 +34,7 @@
 ### 3) Linked list
 1. [linked-list-in-detail](https://github.com/anupamkush9/ds_algo/tree/linked-list-in-detail)
 2. [creation_of_linked_list](https://github.com/anupamkush9/ds_algo/tree/creation_of_linked_list)
+3. [reverse_a_linked_list](https://github.com/anupamkush9/ds_algo/tree/reverse_a_linked_list)
 
 ---
 
