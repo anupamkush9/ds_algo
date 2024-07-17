@@ -54,6 +54,7 @@
 10. [container_with_most_water_by_brute_force_approach](https://github.com/anupamkush9/ds_algo/tree/container_with_most_water_by_brute_force_approach)
 11. [count_pairs_with_given_sum_by_bruteforce_approach](https://github.com/anupamkush9/ds_algo/tree/count_pairs_with_given_sum_by_bruteforce_approach)
 12. [pair_sum_by_2_pointer_approach](https://github.com/anupamkush9/ds_algo/tree/pair_sum_by_2_pointer_approach)
+13. [next_largest_element_by_brute_force_approach](https://github.com/anupamkush9/ds_algo/tree/next_largest_element_by_brute_force_approach)
 
 ### 5) Stack
 1. [reverse_string_by_using_stack](https://github.com/anupamkush9/ds_algo/tree/reverse_string_by_using_stack)
