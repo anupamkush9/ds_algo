@@ -1,14 +1,16 @@
-def revers_str_by_using_stack(s):
-    stack = []
-    temp = ''
-    for element in s:
-        stack.append(element)
-    stack_len = len(stack)
-    for element in range(stack_len):
-        temp += stack.pop()
-    return temp
+def nex_greater(l):
+    next_greater_element = []
+    for i in range(len(l)):
+        for j in range(i+1, len(l)):
+            if l[i] < l[j]:
+                next_greater_element.append(l[j])
+                break
+        else:
+            next_greater_element.append(-1)
+    return next_greater_element
+        
+l = [50, 40, 30, 10]
+print(nex_greater(l))
 
-s = "anupam"
-print("s:::",s)
-reverse_str = revers_str_by_using_stack(s)
-print("reverse_str",reverse_str)
+# ref : https://www.geeksforgeeks.org/problems/next-larger-element-1587115620/1
+# brute force apporach
