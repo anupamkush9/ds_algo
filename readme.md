@@ -62,6 +62,7 @@
 1. [reverse_string_by_using_stack](https://github.com/anupamkush9/ds_algo/tree/reverse_string_by_using_stack)
 2. [valid_pair_parentheses](https://github.com/anupamkush9/ds_algo/tree/valid_pair_parentheses)
 3. [duplicate_pair_parenthesis](https://github.com/anupamkush9/ds_algo/tree/duplicate_pair_parenthesis)
+4. [activity_selection_tuple_input_by_greedy_algo](https://github.com/anupamkush9/ds_algo/tree/activity_selection_tuple_input_by_greedy_algo)
 
 
 ---
