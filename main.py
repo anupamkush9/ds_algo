@@ -1,18 +1,19 @@
-def minAbsoluteDiff(a, b, n):
-    a.sort()
-    b.sort()
-    abs_min_diff = 0
-    for a_ele,b_ele in zip(a,b):
-        abs_min_diff += abs(a_ele-b_ele)
-    return abs_min_diff
+def activity_selection_problem(l):
+    sorted_list = sorted(l, key=lambda x: x[1])
+    activity_count = 0
+    current_val = 0
+    selected_acitivity = []
+    for ele in sorted_list:
+        if current_val < ele[0]:
+            activity_count += 1
+            current_val = ele[1]
+            selected_acitivity.append(ele)
+    return activity_count, selected_acitivity
     
-    
-# a = [4, 1, 8, 7]
-# b = [2, 3, 6, 5]
-a = [4, 1, 8]
-b = [2, 3, 6]
-n = len(a)
-print(minAbsoluteDiff(a, b, n))
+l = [(5,9), (1,2), (3,4), (0,6), (5,7), (8,9)]
+activity_count, selected_acitivity = activity_selection_problem(l)
+print("activity_count:::",activity_count)
+print("selected_acitivity:::",selected_acitivity)
 
 
-# Ref : https://www.geeksforgeeks.org/minimum-sum-absolute-difference-pairs-two-arrays/
+# ref : https://www.tutorialspoint.com/Activity-Selection-Problem
