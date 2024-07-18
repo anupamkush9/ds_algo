@@ -71,3 +71,4 @@
 2. [fraction_knapsack_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/fraction_knapsack_by_greedy_algorithm)
 3. [absolute_min_difference_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/absolute_min_difference_by_greedy_algorithm)
 4. [activity_selection_tuple_input_by_greedy_algo](https://github.com/anupamkush9/ds_algo/tree/activity_selection_tuple_input_by_greedy_algo)
+5. [minimum_number_of_coins_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/minimum_number_of_coins_by_greedy_algorithm)
