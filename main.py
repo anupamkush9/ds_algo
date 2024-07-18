@@ -1,27 +1,34 @@
-# Custom function
-def activitySelection(start, end):
-    end.sort()
-    activity_count = 0
-    acitvities = []
+def fractional_knapsack(values, weights, capacity):
+    ratios = [ values/weight for values,weight in zip(values, weights)]
     
-    acitvities.append(0)
-    last_activity_end_time = end[0]
-    activity_count = 1
-    for i in range(1,len(end)):
-        if start[i] > last_activity_end_time:
-            acitvities.append(i)
-            last_activity_end_time = end[i]
-            activity_count += 1
-    return activity_count
+    # for sorting on the basis of ratio. ( zip function will sort on the basis of ratio)
+    sorted_ratios = sorted(zip(ratios, values, weights), reverse=True)
+    current_capacity = 0
+    max_value = 0
+    taken_items = []
+    
+    for ratio, value, weight in sorted_ratios:
+        if current_capacity + weight <= capacity:
+            current_capacity += weight
+            max_value += value
+            taken_items.append(1)
+        else:
+            fraction = (capacity-current_capacity)/weight
+            max_value += fraction*value
+            current_capacity += weight
+            taken_items.append(fraction)
+            break
+    return max_value, taken_items            
             
+    
+# Example usage
+values = [60, 100, 120]
+weights = [10, 20, 30]
+capacity = 50
 
-# start = [1, 3, 2, 5]
-# end = [2, 4, 3, 6]
-start = [2, 1]
-end = [2, 2]
+max_value, fractions = fractional_knapsack(values, weights, capacity)
 
-print("************")
-print(activitySelection(start, end))
-print("************")
+print("Maximum value:", max_value)
+print("Fractions of items taken:", fractions)
 
-# Ref : https://www.geeksforgeeks.org/problems/activity-selection-1587115620/1
+# Ref : https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1
