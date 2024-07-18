@@ -1,19 +1,16 @@
-def activity_selection_problem(l):
-    sorted_list = sorted(l, key=lambda x: x[1])
-    activity_count = 0
-    current_val = 0
-    selected_acitivity = []
-    for ele in sorted_list:
-        if current_val < ele[0]:
-            activity_count += 1
-            current_val = ele[1]
-            selected_acitivity.append(ele)
-    return activity_count, selected_acitivity
-    
-l = [(5,9), (1,2), (3,4), (0,6), (5,7), (8,9)]
-activity_count, selected_acitivity = activity_selection_problem(l)
-print("activity_count:::",activity_count)
-print("selected_acitivity:::",selected_acitivity)
+def minimum_number_of_coins(indian_currency, amount):
+    required_coins = []
+    for currency in indian_currency[::-1]:
+        while amount >= currency:
+            required_coins.append(currency)
+            amount -= currency
+    return required_coins
+            
+indian_currency = [1, 2, 5, 10, 20, 50, 100, 200, 500, 2000]
+amount = 121
+required_coins = minimum_number_of_coins(indian_currency, amount)
+print("coins_count:::",required_coins)
 
 
-# ref : https://www.tutorialspoint.com/Activity-Selection-Problem
+# ref : https://takeuforward.org/data-structure/find-minimum-number-of-coins/
+# ref : https://www.geeksforgeeks.org/problems/-minimum-number-of-coins4426/1
