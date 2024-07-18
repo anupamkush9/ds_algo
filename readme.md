@@ -62,7 +62,6 @@
 1. [reverse_string_by_using_stack](https://github.com/anupamkush9/ds_algo/tree/reverse_string_by_using_stack)
 2. [valid_pair_parentheses](https://github.com/anupamkush9/ds_algo/tree/valid_pair_parentheses)
 3. [duplicate_pair_parenthesis](https://github.com/anupamkush9/ds_algo/tree/duplicate_pair_parenthesis)
-4. [activity_selection_tuple_input_by_greedy_algo](https://github.com/anupamkush9/ds_algo/tree/activity_selection_tuple_input_by_greedy_algo)
 
 
 ---
@@ -71,3 +70,4 @@
 1. [activity_selection_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/activity_selection_by_greedy_algorithm)
 2. [fraction_knapsack_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/fraction_knapsack_by_greedy_algorithm)
 3. [absolute_min_difference_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/absolute_min_difference_by_greedy_algorithm)
+4. [activity_selection_tuple_input_by_greedy_algo](https://github.com/anupamkush9/ds_algo/tree/activity_selection_tuple_input_by_greedy_algo)
