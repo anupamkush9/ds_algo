@@ -62,3 +62,8 @@
 1. [reverse_string_by_using_stack](https://github.com/anupamkush9/ds_algo/tree/reverse_string_by_using_stack)
 2. [valid_pair_parentheses](https://github.com/anupamkush9/ds_algo/tree/valid_pair_parentheses)
 3. [duplicate_pair_parenthesis](https://github.com/anupamkush9/ds_algo/tree/duplicate_pair_parenthesis)
+
+---
+
+### 6) Greedy Algorithm
+1. [activity_selection_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/activity_selection_by_greedy_algorithm)
