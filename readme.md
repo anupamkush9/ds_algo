@@ -67,3 +67,4 @@
 
 ### 6) Greedy Algorithm
 1. [activity_selection_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/activity_selection_by_greedy_algorithm)
+2. [fraction_knapsack_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/fraction_knapsack_by_greedy_algorithm)
