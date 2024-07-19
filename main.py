@@ -1,9 +1,18 @@
-def fibonacci(a, b, n):
-    if n==1:
-        return a + b
-    print(a + b)
-    return fibonacci(b, a+b, n-1)
+def insert_at_bottom(stack, element):
+    if not stack:
+        stack.append(element)
+    else:
+        top_element = stack.pop()
+        insert_at_bottom(stack, element)
+        stack.append(top_element)
 
-print(0)
-print(1)
-print(fibonacci(0,1,5))
+# Example usage
+stack = [1, 2, 3, 4]
+element_to_insert = 0
+
+print("Original Stack:", stack)
+insert_at_bottom(stack, element_to_insert)
+print("Stack after inserting at bottom:", stack)
+
+# https://iq.opengenus.org/insert-element-at-bottom-of-stack/
+# https://www.geeksforgeeks.org/problems/insert-an-element-at-the-bottom-of-a-stack/0
