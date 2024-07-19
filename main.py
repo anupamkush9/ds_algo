@@ -5,9 +5,11 @@ def findDuplicateparenthesis(brackets):
             stack.append(bracket)
         elif bracket == ")":
             count = 0
-            last_item = stack.pop()
-            while '(' != last_item:
+            stack_last_element = stack[-1]
+            while stack_last_element != '(':
                 count += 1
+                stack.pop()
+                stack_last_element = stack[-1]
             if count < 1:
                 return True
     return False
