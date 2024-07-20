@@ -64,6 +64,7 @@
 3. [duplicate_pair_parenthesis](https://github.com/anupamkush9/ds_algo/tree/duplicate_pair_parenthesis)
 4. [next_greater_element_by_stack](https://github.com/anupamkush9/ds_algo/tree/next_greater_element_by_stack)
 5. [insert_at_bottom_in_stack](https://github.com/anupamkush9/ds_algo/tree/insert_at_bottom_in_stack)
+6. [queue_implementation_by_using_two_stacks](https://github.com/anupamkush9/ds_algo/tree/queue_implementation_by_using_two_stacks)
 
 
 ---
