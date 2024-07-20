@@ -67,6 +67,10 @@
 6. [queue_implementation_by_using_two_stacks](https://github.com/anupamkush9/ds_algo/tree/queue_implementation_by_using_two_stacks)
 7. [stack_implementation_using_queue](https://github.com/anupamkush9/ds_algo/tree/stack_implementation_using_queue)
 
+---
+
+### Queue
+1. [reverse_a_queue](https://github.com/anupamkush9/ds_algo/tree/reverse_a_queue)
 
 ---
 
