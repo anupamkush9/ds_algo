@@ -83,5 +83,5 @@
 5. [minimum_number_of_coins_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/minimum_number_of_coins_by_greedy_algorithm)
 
 ### 7) Sorting
-1. [dictionary_sorting](https://github.com/anupamkush9/ds_algo/tree/dictionary_sorting)
+1. [sorting_list_of_dictionary](https://github.com/anupamkush9/ds_algo/tree/sorting_list_of_dictionary)
 
