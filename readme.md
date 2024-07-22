@@ -29,6 +29,7 @@
 22. [element_indexes_of_target_element](https://github.com/anupamkush9/ds_algo/tree/element_indexes_of_target_element)
 23. [find_the_length_of_string](https://github.com/anupamkush9/ds_algo/tree/find_the_length_of_string)
 24. [merge_sort_by_recursion](https://github.com/anupamkush9/ds_algo/tree/merge_sort_by_recursion)
+25. [flatten_the_list](https://github.com/anupamkush9/ds_algo/tree/flatten_the_list)
 ---
 
 ### 3) Linked list
