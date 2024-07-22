@@ -81,3 +81,7 @@
 3. [absolute_min_difference_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/absolute_min_difference_by_greedy_algorithm)
 4. [activity_selection_tuple_input_by_greedy_algo](https://github.com/anupamkush9/ds_algo/tree/activity_selection_tuple_input_by_greedy_algo)
 5. [minimum_number_of_coins_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/minimum_number_of_coins_by_greedy_algorithm)
+
+### 7) Sorting
+1. [dictionary_sorting](https://github.com/anupamkush9/ds_algo/tree/dictionary_sorting)
+
