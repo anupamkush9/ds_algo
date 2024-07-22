@@ -1,9 +1,7 @@
-def fibonacci(a, b, n):
-    if n==1:
-        return a + b
-    print(a + b)
-    return fibonacci(b, a+b, n-1)
+# L = [ {‘x’: 3}, {‘x’: 1}, {‘x’: 2} ]
+# Sort it based on x value in ascending order. 
+# Expected output: [ {‘x’: 1}, {‘x’: 2}, {‘x’: 3} ]
 
-print(0)
-print(1)
-print(fibonacci(0,1,5))
+L = [ {'x': 3}, {'x': 1}, {'x': 2} ]
+sorted_L = sorted(L, key=lambda k: k['x'])
+print(sorted_L)
