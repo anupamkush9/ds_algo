@@ -56,6 +56,7 @@
 11. [count_pairs_with_given_sum_by_bruteforce_approach](https://github.com/anupamkush9/ds_algo/tree/count_pairs_with_given_sum_by_bruteforce_approach)
 12. [pair_sum_by_2_pointer_approach](https://github.com/anupamkush9/ds_algo/tree/pair_sum_by_2_pointer_approach)
 13. [next_largest_element_by_brute_force_approach](https://github.com/anupamkush9/ds_algo/tree/next_largest_element_by_brute_force_approach)
+14. [strictly_increasing_array](https://github.com/anupamkush9/ds_algo/tree/strictly_increasing_array)
 
 ---
 
