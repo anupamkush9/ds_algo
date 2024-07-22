@@ -1,52 +1,19 @@
-# def draw_diamond(n):
-#     # for uppper 1st half
-#     for i in range(n):
-#         for space in range(n-i-1):
-#             print(" ",end="")
-#         for j in range(i+1):
-#             print("*", end=" ")
-#         print()
+# Input: arr[] = {1, 1, 2}
+# Output: Yes
+# Explanation: Removing an occurrence of 1 modifies the array to {1, 2}, which is strictly increasing array.
 
-#     # for lower 2nd half
-#     for i in range(n-2,-1,-1):
-#         for space in range(n-i-1):
-#             print(" ",end="")
-#         for j in range(i+1):
-#             print("*", end=" ")
-#         print()            
+# Input: arr[] = {2, 2, 3, 4, 5, 5} 
+# Output: No
+
+def strictlyIncreasingArray(l):
+    non_strictly_increasing_element = 0
+    for i in range(len(l)-1):
+        if l[i] >= l[i+1]:
+            non_strictly_increasing_element += 1
+    return non_strictly_increasing_element == 1
             
 
-# n = int(input("Enter no of rows "))
-# draw_diamond(n)
+arr = [1, 1, 2]
+print("strictlyIncreasingArray===",strictlyIncreasingArray(arr))    
 
-
-
-def print_diamond(n):
-    # Upper part of the diamond
-    for i in range(n):
-        print(" " * (n - i - 1) + "*" * (2 * i + 1))
-    
-    # Lower part of the diamond
-    for i in range(n - 2, -1, -1):
-        print(" " * (n - i - 1) + "*" * (2 * i + 1))
-
-# Example usage:
-n = 5
-print_diamond(n)
-
-
-
-
-
-# def print_pattern(rows):
-#     # Upper part of the pattern
-#     for i in range(1, rows + 1):
-#         print(' ' * (rows - i) + '* ' * i)
-    
-#     # Lower part of the pattern
-#     for i in range(rows - 1, 0, -1):
-#         print(' ' * (rows - i) + '* ' * i)
-
-# # Number of rows for the upper part
-# rows = 4
-# print_pattern(rows)
+# Ref : https://www.geeksforgeeks.org/check-whether-an-array-can-be-made-strictly-increasing-by-removing-at-most-one-element/
