@@ -1,10 +1,38 @@
-# array_of_tuples = [(3, 'c'), (1, 'a'), (2, 'b')]
-# sorted_array = sorted(array_of_tuples, key=lambda x: x[1])
 
-# print(sorted_array)  # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
+# def get_intersection_elements(A, B):
+#     """
+#         By Brute force, Approach implementation
+#     """
+#     intersection_elements = []
+#     for ele in A:
+#         if ele in B:
+#             intersection_elements.append(ele)
+#     return intersection_elements
 
 
-array_of_tuples = [(3, 'c'), (1, 'a'), (2, 'b')]
-sorted_array = sorted(array_of_tuples, key=lambda x: x[1], reverse=True)
+def get_intersection_elements(A, B):
+    left = 0
+    right =0
+    left_len = len(A)-1
+    right_len = len(B)-1
+    intersection_elements = []
+    while left < left_len or right < right_len:
+        if A[left] == B[right]:
+            intersection_elements.append(A[left])
+            left += 1
+            right += 1
+        elif  A[left] > B[right]:
+            right += 1
+        else:
+            left += 1
+    return intersection_elements
 
-print(sorted_array)  # Output: [(3, 'c'), (2, 'b'), (1, 'a')]
+# A = [1, 2, 3, 3, 4, 5, 6]
+# B = [3, 3, 5]
+
+A = [1, 2, 3, 3, 4, 5, 6]
+B = [3, 5]
+print("intersection_elements: ",get_intersection_elements(A, B))
+
+# Question Ref : 
+# https://takeuforward.org/data-structure/intersection-of-two-sorted-arrays/
