@@ -1,14 +1,33 @@
-from collections import Counter
+def max_sum_subarray(nums, k):
+    """
+        sliding window Brute force Approach Implmentation
+    """
+    max_sum = 0
+    for i in range(len(nums)-k+1):
+        if sum(nums[i:i+k]) > max_sum:
+            max_sum = sum(nums[i:i+k])
+    return max_sum
 
-def top_k_frequent_elements(nums, k):
-    counter = Counter(nums)
-    sorted_element_by_frequency = sorted(counter.items(), key=lambda x: (-x[1], -x[0]))
-    return [ele for ele,freq in sorted_element_by_frequency[:k]]
+def max_sum_subarray(nums, k):
+    """
+        Sliding window optimize Approach
+    """
+    max_sum = 0
+    for i in range(len(nums)-k+1):
+        if i == 0:
+            sub_array_total = sum(nums[:k])
+        else:
+            sub_array_total = sub_array_total + nums[i+k-1]-nums[i-1]
+        if sub_array_total > max_sum:
+            max_sum = sub_array_total
+    return max_sum
 
-N = 8
-nums = [1, 1, 2, 2, 3, 3, 3, 4]
-k = 2
-print(top_k_frequent_elements(nums, k))
+
+# nums = [100, 200, 300, 400]
+# k = 2
+nums = [100, 200, 300, 400]
+k = 4
+print(max_sum_subarray(nums, k))
 
 
-# Ref : https://www.geeksforgeeks.org/problems/top-k-frequent-elements-in-array/1
+# Ref : https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1
