@@ -59,6 +59,8 @@
 14. [next_largest_element_by_brute_force_approach](https://github.com/anupamkush9/ds_algo/tree/next_largest_element_by_brute_force_approach)
 15. [strictly_increasing_array](https://github.com/anupamkush9/ds_algo/tree/strictly_increasing_array)
 16. [max_consecutive_characters](https://github.com/anupamkush9/ds_algo/tree/max_consecutive_characters)
+17. [number_that_appears_once_by_xor_operator](https://github.com/anupamkush9/ds_algo/tree/number_that_appears_once_by_xor_operator)
+
 ---
 
 ### 5) Stack
