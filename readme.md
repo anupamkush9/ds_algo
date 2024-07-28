@@ -60,6 +60,7 @@
 15. [strictly_increasing_array](https://github.com/anupamkush9/ds_algo/tree/strictly_increasing_array)
 16. [max_consecutive_characters](https://github.com/anupamkush9/ds_algo/tree/max_consecutive_characters)
 17. [number_that_appears_once_by_xor_operator](https://github.com/anupamkush9/ds_algo/tree/number_that_appears_once_by_xor_operator)
+18. [find_the_missing_number_in_array_by_xor_operator_and_hashing](https://github.com/anupamkush9/ds_algo/tree/find_the_missing_number_in_array_by_xor_operator_and_hashing)
 
 ---
 
