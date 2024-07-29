@@ -1,33 +1,32 @@
-def max_sum_subarray(nums, k):
-    """
-        sliding window Brute force Approach Implmentation
-    """
-    max_sum = 0
-    for i in range(len(nums)-k+1):
-        if sum(nums[i:i+k]) > max_sum:
-            max_sum = sum(nums[i:i+k])
-    return max_sum
+# largest subarray of sum k by sliding window
 
-def max_sum_subarray(nums, k):
-    """
-        Sliding window optimize Approach
-    """
-    max_sum = 0
-    for i in range(len(nums)-k+1):
-        if i == 0:
-            sub_array_total = sum(nums[:k])
-        else:
-            sub_array_total = sub_array_total + nums[i+k-1]-nums[i-1]
-        if sub_array_total > max_sum:
-            max_sum = sub_array_total
-    return max_sum
+def get_largest_subarray_of_sum_k(array, k):
+    left = 0
+    right = len(array)-1
+    while(left < right):
+        if sum(array[left:right]) == k:
+            return len(array[left:right])
+        elif array[left] > array[right]:
+            left += 1
+        elif array[right] > array[left]:
+            right -= 1
+    return -1
+        
+array = [2, 3, 5]
+k = 5
 
+# array = [ 10, 5, 2, 7, 1, 9 ]
+# k = 15
 
-# nums = [100, 200, 300, 400]
-# k = 2
-nums = [100, 200, 300, 400]
-k = 4
-print(max_sum_subarray(nums, k))
+# array = [-5, 8, -14, 2, 4, 12]
+# k = -5
+
+# k = 10
+# array = [2,3,5,1,9]
+print("output ::: ",get_largest_subarray_of_sum_k(array, k))
 
 
-# Ref : https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1
+# Question Ref:
+# https://takeuforward.org/data-structure/longest-subarray-with-given-sum-k/
+# https://www.geeksforgeeks.org/longest-sub-array-sum-k/
+
