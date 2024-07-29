@@ -1,26 +1,36 @@
 # largest subarray of sum k by sliding window
 
-def maximum_of_all_subarray(array, k):
-    ans = []
-    for i in range(len(array)-k+1):
-        ans.append(max(array[:i+k]))
-    return ans
+def longest_substring_with_k_unique_characters(array, k):
+    dict = {}
+    max_len = 0
+    arr_len = len(array)
+    left, right = 0, 0
+    while right < arr_len:
+        dict[array[right]] = dict.get(array[right], 0)+1
+        if len(dict.keys()) == k:
+            max_len = sum([val for key,val in dict.items()])
+        while len(dict.keys()) > k:
+            if array[left] in dict.keys():
+                del dict[array[left]]
+            left += 1
+        right += 1  
+    return max_len
         
+arr = "aabbcc"
+k = 1
+# Output: 2
+# Explanation: Max substring can be any one from {“aa” , “bb” , “cc”}.
 
-k = 3
-arr = [1, 2, 3, 1, 4, 5, 2, 3, 6]
-# Output: 
-# 3 3 4 5 5 5 6 
-
-
-# k = 4
-# arr = [8, 5, 10, 7, 9, 4, 15, 12, 90, 13]
-# Output: 
-# 10 10 10 15 15 90 90
-print("output ::: ",*maximum_of_all_subarray(arr, k))
-
-
+# arr = "aabbcc"
+# k = 2
+# Output: 4
+# Explanation: Max substring can be any one from {“aabb” , “bbcc”}.
+# arr = "aabbcc"
+# k = 3
+# Output: 6
+print("------>",longest_substring_with_k_unique_characters(arr, k))
 # Question Ref:
-# https://takeuforward.org/data-structure/sliding-window-maximum/f
-# https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1
+# https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/
 
+# https://www.youtube.com/watch?v=Lav6St0W_pQ&list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj&index=10
+# Above video title -->>  Longest Substring With K Unique Characters | Variable Size Sliding Window
