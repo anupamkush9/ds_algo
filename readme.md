@@ -63,6 +63,7 @@
 18. [find_the_missing_number_in_array_by_xor_operator_and_hashing](https://github.com/anupamkush9/ds_algo/tree/find_the_missing_number_in_array_by_xor_operator_and_hashing)
 19. [top_k_frequent_element_in_array](https://github.com/anupamkush9/ds_algo/tree/top_k_frequent_element_in_array)
 20. [maximum_sum_of_subarray_of_k_size_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/maximum_sum_of_subarray_of_k_size_by_sliding_window)
+21. [longest_subarray_with_given_sum_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/longest_subarray_with_given_sum_k_by_sliding_window)
 ---
 
 ### 5) Stack
