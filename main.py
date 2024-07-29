@@ -1,32 +1,21 @@
-# largest subarray of sum k by sliding window
+# count occurances of anagram by sliding window
 
-def get_largest_subarray_of_sum_k(array, k):
-    left = 0
-    right = len(array)-1
-    while(left < right):
-        if sum(array[left:right]) == k:
-            return len(array[left:right])
-        elif array[left] > array[right]:
-            left += 1
-        elif array[right] > array[left]:
-            right -= 1
-    return -1
-        
-array = [2, 3, 5]
-k = 5
+def get_anagram_string_count(s, anagram_string):
+    count = 0
+    anagram_string_sorted = ''.join(sorted(anagram_string))
+    for i in range(len(s)-len(anagram_string)+1):
+        window_str_sorted = ''.join(sorted(s[i:i+len(anagram_string)]))
+        if window_str_sorted == anagram_string_sorted:
+            count += 1
+    return count
 
-# array = [ 10, 5, 2, 7, 1, 9 ]
-# k = 15
+s = "forxxorfxdofr"
+anagram_string = "for"
 
-# array = [-5, 8, -14, 2, 4, 12]
-# k = -5
-
-# k = 10
-# array = [2,3,5,1,9]
-print("output ::: ",get_largest_subarray_of_sum_k(array, k))
+# s = "aabaabaa"
+# anagram_string = "aaba"
+print("output ::: ",get_anagram_string_count(s, anagram_string))
 
 
 # Question Ref:
-# https://takeuforward.org/data-structure/longest-subarray-with-given-sum-k/
-# https://www.geeksforgeeks.org/longest-sub-array-sum-k/
-
+# https://www.geeksforgeeks.org/count-occurrences-of-anagrams/
