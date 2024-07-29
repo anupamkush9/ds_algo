@@ -66,11 +66,11 @@
 ---
 
 ### 5) Sliding Window 
-21. [maximum_sum_of_subarray_of_k_size_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/maximum_sum_of_subarray_of_k_size_by_sliding_window)
-22. [longest_subarray_with_given_sum_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/longest_subarray_with_given_sum_k_by_sliding_window)
-23. [first_negative_integer_in_every_window_of_size_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/first_negative_integer_in_every_window_of_size_k_by_sliding_window)
-24. [count_occurrences_of_anagram_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/count_occurrences_of_anagram_by_sliding_window)
-25. [maximum_of_all_subarray_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/maximum_of_all_subarray_by_sliding_window)
+1. [maximum_sum_of_subarray_of_k_size_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/maximum_sum_of_subarray_of_k_size_by_sliding_window)
+2. [longest_subarray_with_given_sum_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/longest_subarray_with_given_sum_k_by_sliding_window)
+3. [first_negative_integer_in_every_window_of_size_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/first_negative_integer_in_every_window_of_size_k_by_sliding_window)
+4. [count_occurrences_of_anagram_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/count_occurrences_of_anagram_by_sliding_window)
+5. [maximum_of_all_subarray_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/maximum_of_all_subarray_by_sliding_window)
 ---
 
 ### 6) Stack
