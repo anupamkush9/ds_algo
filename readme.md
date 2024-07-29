@@ -71,6 +71,7 @@
 3. [first_negative_integer_in_every_window_of_size_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/first_negative_integer_in_every_window_of_size_k_by_sliding_window)
 4. [count_occurrences_of_anagram_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/count_occurrences_of_anagram_by_sliding_window)
 5. [maximum_of_all_subarray_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/maximum_of_all_subarray_by_sliding_window)
+6. [longest_substring_with_k_unique_characters_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/longest_substring_with_k_unique_characters_by_sliding_window)
 ---
 
 ### 6) Stack
