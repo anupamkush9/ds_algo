@@ -62,13 +62,18 @@
 17. [number_that_appears_once_by_xor_operator](https://github.com/anupamkush9/ds_algo/tree/number_that_appears_once_by_xor_operator)
 18. [find_the_missing_number_in_array_by_xor_operator_and_hashing](https://github.com/anupamkush9/ds_algo/tree/find_the_missing_number_in_array_by_xor_operator_and_hashing)
 19. [top_k_frequent_element_in_array](https://github.com/anupamkush9/ds_algo/tree/top_k_frequent_element_in_array)
-20. [maximum_sum_of_subarray_of_k_size_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/maximum_sum_of_subarray_of_k_size_by_sliding_window)
-21. [longest_subarray_with_given_sum_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/longest_subarray_with_given_sum_k_by_sliding_window)
-22. [first_negative_integer_in_every_window_of_size_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/first_negative_integer_in_every_window_of_size_k_by_sliding_window)
-23. [count_occurrences_of_anagram_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/count_occurrences_of_anagram_by_sliding_window)
+
 ---
 
-### 5) Stack
+### 5) Sliding Window 
+21. [maximum_sum_of_subarray_of_k_size_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/maximum_sum_of_subarray_of_k_size_by_sliding_window)
+22. [longest_subarray_with_given_sum_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/longest_subarray_with_given_sum_k_by_sliding_window)
+23. [first_negative_integer_in_every_window_of_size_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/first_negative_integer_in_every_window_of_size_k_by_sliding_window)
+24. [count_occurrences_of_anagram_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/count_occurrences_of_anagram_by_sliding_window)
+25. [maximum_of_all_subarray_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/maximum_of_all_subarray_by_sliding_window)
+---
+
+### 6) Stack
 1. [reverse_string_by_using_stack](https://github.com/anupamkush9/ds_algo/tree/reverse_string_by_using_stack)
 2. [valid_pair_parentheses](https://github.com/anupamkush9/ds_algo/tree/valid_pair_parentheses)
 3. [duplicate_pair_parenthesis](https://github.com/anupamkush9/ds_algo/tree/duplicate_pair_parenthesis)
@@ -79,12 +84,12 @@
 
 ---
 
-### Queue
+### 7) Queue
 1. [reverse_a_queue](https://github.com/anupamkush9/ds_algo/tree/reverse_a_queue)
 
 ---
 
-### 6) Greedy Algorithm
+### 8) Greedy Algorithm
 1. [activity_selection_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/activity_selection_by_greedy_algorithm)
 2. [fraction_knapsack_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/fraction_knapsack_by_greedy_algorithm)
 3. [absolute_min_difference_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/absolute_min_difference_by_greedy_algorithm)
@@ -93,12 +98,12 @@
 
 ---
 
-### 7) Sorting
+### 9) Sorting
 1. [sorting_list_of_dictionary](https://github.com/anupamkush9/ds_algo/tree/sorting_list_of_dictionary)
 2. [sorting_list_of_tuple_on_the_basis_of_2nd_argument](https://github.com/anupamkush9/ds_algo/tree/sorting_list_of_tuple_on_the_basis_of_2nd_argument)
 
 ---
 
-### 8) Star printing pattern
+### 10) Star printing pattern
 1. [Diamond_printing_pattern](https://github.com/anupamkush9/ds_algo/tree/Diamond_printing_pattern)
 
