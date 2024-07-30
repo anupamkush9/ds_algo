@@ -39,6 +39,7 @@
 4. [reverse_linked_list_by_using_stack](https://github.com/anupamkush9/ds_algo/tree/reverse_linked_list_by_using_stack)
 5. [check_is_palindrome_or_mid_of_the_linkedlist](https://github.com/anupamkush9/ds_algo/tree/check_is_palindrome_or_mid_of_the_linkedlist)
 6. [detect_loop_in_linkedlist](https://github.com/anupamkush9/ds_algo/tree/detect_loop_in_linkedlist)
+7. [longest_substring_with_k_unique_characters_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/longest_substring_with_k_unique_characters_by_sliding_window)
 
 ---
 
