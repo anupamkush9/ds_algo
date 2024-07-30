@@ -1,36 +1,45 @@
-# largest subarray of sum k by sliding window
+# Python3 program to find N'th node from end
+class Node:
+    def __init__(self, val):
+        self.data = val
+        self.next = None
 
-def longest_substring_with_k_unique_characters(array, k):
-    dict = {}
-    max_len = 0
-    arr_len = len(array)
-    left, right = 0, 0
-    while right < arr_len:
-        dict[array[right]] = dict.get(array[right], 0)+1
-        if len(dict.keys()) == k:
-            max_len = sum([val for key,val in dict.items()])
-        while len(dict.keys()) > k:
-            if array[left] in dict.keys():
-                del dict[array[left]]
-            left += 1
-        right += 1  
-    return max_len
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    
+    def insert_at_begin(self, val):
+        new_node = Node(val)
+        new_node.next = self.head
+        self.head = new_node
+    
+    def nth_from_end(self, n):
+        main_ptr = self.head
+        ref_ptr = self.head
+
+        count = 0
+        while count < n:
+            if ref_ptr is None:
+                return -1
+            ref_ptr = ref_ptr.next
+            count += 1
         
-arr = "aabbcc"
-k = 1
-# Output: 2
-# Explanation: Max substring can be any one from {“aa” , “bb” , “cc”}.
+        while ref_ptr is not None:
+            ref_ptr = ref_ptr.next
+            main_ptr = main_ptr.next
+        
+        return main_ptr.data
+    
+# Driver code
+ll = LinkedList()
 
-# arr = "aabbcc"
-# k = 2
-# Output: 4
-# Explanation: Max substring can be any one from {“aabb” , “bbcc”}.
-# arr = "aabbcc"
-# k = 3
-# Output: 6
-print("------>",longest_substring_with_k_unique_characters(arr, k))
-# Question Ref:
-# https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/
+ll.insert_at_begin(20)
+ll.insert_at_begin(4)
+ll.insert_at_begin(15)
+ll.insert_at_begin(35)
 
-# https://www.youtube.com/watch?v=Lav6St0W_pQ&list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj&index=10
-# Above video title -->>  Longest Substring With K Unique Characters | Variable Size Sliding Window
+# Function call
+print(ll.nth_from_end(4))
+
+
+# https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
