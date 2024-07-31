@@ -66,7 +66,12 @@
 
 ---
 
-### 5) Sliding Window 
+### 5) 2D Array
+1. [sum_of_diagonal_elements_in_array](https://github.com/anupamkush9/ds_algo/tree/sum_of_diagonal_elements_in_array)
+   
+---
+
+### 6) Sliding Window 
 1. [maximum_sum_of_subarray_of_k_size_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/maximum_sum_of_subarray_of_k_size_by_sliding_window)
 2. [longest_subarray_with_given_sum_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/longest_subarray_with_given_sum_k_by_sliding_window)
 3. [first_negative_integer_in_every_window_of_size_k_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/first_negative_integer_in_every_window_of_size_k_by_sliding_window)
@@ -75,7 +80,7 @@
 6. [longest_substring_with_k_unique_characters_by_sliding_window](https://github.com/anupamkush9/ds_algo/tree/longest_substring_with_k_unique_characters_by_sliding_window)
 ---
 
-### 6) Stack
+### 7) Stack
 1. [reverse_string_by_using_stack](https://github.com/anupamkush9/ds_algo/tree/reverse_string_by_using_stack)
 2. [valid_pair_parentheses](https://github.com/anupamkush9/ds_algo/tree/valid_pair_parentheses)
 3. [duplicate_pair_parenthesis](https://github.com/anupamkush9/ds_algo/tree/duplicate_pair_parenthesis)
@@ -86,12 +91,12 @@
 
 ---
 
-### 7) Queue
+### 8) Queue
 1. [reverse_a_queue](https://github.com/anupamkush9/ds_algo/tree/reverse_a_queue)
 
 ---
 
-### 8) Greedy Algorithm
+### 9) Greedy Algorithm
 1. [activity_selection_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/activity_selection_by_greedy_algorithm)
 2. [fraction_knapsack_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/fraction_knapsack_by_greedy_algorithm)
 3. [absolute_min_difference_by_greedy_algorithm](https://github.com/anupamkush9/ds_algo/tree/absolute_min_difference_by_greedy_algorithm)
@@ -100,12 +105,13 @@
 
 ---
 
-### 9) Sorting
+### 10) Sorting
 1. [sorting_list_of_dictionary](https://github.com/anupamkush9/ds_algo/tree/sorting_list_of_dictionary)
 2. [sorting_list_of_tuple_on_the_basis_of_2nd_argument](https://github.com/anupamkush9/ds_algo/tree/sorting_list_of_tuple_on_the_basis_of_2nd_argument)
 
 ---
 
-### 10) Star printing pattern
+### 11) Star printing pattern
 1. [Diamond_printing_pattern](https://github.com/anupamkush9/ds_algo/tree/Diamond_printing_pattern)
+
 
