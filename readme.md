@@ -113,5 +113,6 @@
 
 ### 11) Star printing pattern
 1. [Diamond_printing_pattern](https://github.com/anupamkush9/ds_algo/tree/Diamond_printing_pattern)
+2. [all_pattern_program_with_different_logics](https://github.com/anupamkush9/ds_algo/tree/all_pattern_program_with_different_logics)
 
 
