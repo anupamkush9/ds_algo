@@ -1,9 +1,11 @@
-def fibonacci(a, b, n):
-    if n==1:
-        return a + b
-    print(a + b)
-    return fibonacci(b, a+b, n-1)
+def change_array(index, l, val):
+    if index == len(l):
+        print("change_array :: ",l)
+        return
+    l[index] = val
+    change_array(index+1, l, val+1)
+    l[index] = l[index] - 2
 
-print(0)
-print(1)
-print(fibonacci(0,1,5))
+l = [1,2,3,4,5]
+change_array(0, l, 1)
+print("main:::",l)
