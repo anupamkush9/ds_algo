@@ -1,9 +1,10 @@
-def fibonacci(a, b, n):
-    if n==1:
-        return a + b
-    print(a + b)
-    return fibonacci(b, a+b, n-1)
+l = [1, 2, 4, 66, 4, 2]
 
-print(0)
-print(1)
-print(fibonacci(0,1,5))
+print("Before bubble sort ::::::::::::",l)
+array_len = len(l)
+for i in range(array_len):
+    for j in range(array_len-i-1):
+        if l[j] > l[j+1]:
+            l[j+1], l[j] = l[j], l[j+1]
+
+print("After bubble sort :::::::::::::",l)
