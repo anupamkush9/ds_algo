@@ -1,10 +1,16 @@
-l = [1, 2, 4, 66, 4, 2]
+def selection_sort(arr):
+    n = len(arr)
+    
+    for i in range(n):
+        min_idx = i
+        for j in range(i+1, n):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
 
-print("Before bubble sort ::::::::::::",l)
-array_len = len(l)
-for i in range(array_len):
-    for j in range(array_len-i-1):
-        if l[j] > l[j+1]:
-            l[j+1], l[j] = l[j], l[j+1]
 
-print("After bubble sort :::::::::::::",l)
+# Example usage:
+arr = [5, 3, 8, 2, 1]
+selection_sort(arr)
+print("Sorted array:", arr)
