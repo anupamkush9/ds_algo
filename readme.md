@@ -108,6 +108,7 @@
 ### 10) Sorting
 1. [sorting_list_of_dictionary](https://github.com/anupamkush9/ds_algo/tree/sorting_list_of_dictionary)
 2. [sorting_list_of_tuple_on_the_basis_of_2nd_argument](https://github.com/anupamkush9/ds_algo/tree/sorting_list_of_tuple_on_the_basis_of_2nd_argument)
+3. [bubble_sort](https://github.com/anupamkush9/ds_algo/tree/bubble_sort)
 
 ---
 
