@@ -1,3 +1,21 @@
+"""
+Example 1:
+Input:
+ A: [1, 2, 3, 3, 4, 5, 6], B: [3, 3, 5]  
+Output:
+ 3, 3, 5  
+Explanation:
+ We are given two arrays A and B. The elements present in both arrays are 3, 3, and 5.
+
+Example 2:
+Input:
+ A: [1, 2, 3, 3, 4, 5, 6], B: [3, 5]  
+Output:
+ 3, 5  
+Explanation:
+ We are given two arrays A and B. The elements present in both arrays are 3 and 5.
+ """
+
 
 # def get_intersection_elements(A, B):
 #     """
