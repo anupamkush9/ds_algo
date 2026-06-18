@@ -1,3 +1,13 @@
+"""
+Input: s = "geeekk"
+Output: e
+Explanation: character e comes 3 times consecutively which is maximum.
+
+Input: s = "aaaabbcbbb"
+Output: a
+Explanation: character a comes 4 times consecutively which is maximum.
+"""
+
 def maxConsecutivecharacters(l):
     max_consicutive = 1
     max_occurance_char = l[0]
