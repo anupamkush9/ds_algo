@@ -6,14 +6,14 @@
 # Output: No
 
 def strictlyIncreasingArray(l):
-    non_strictly_increasing_element = 0
+    strictly_increasing_array = True
     for i in range(len(l)-1):
-        if l[i] >= l[i+1]:
-            non_strictly_increasing_element += 1
-    return non_strictly_increasing_element == 1
+        if l[i] > l[i+1]:
+            strictly_increasing_array = False
+    return strictly_increasing_array
             
 
 arr = [1, 1, 2]
-print("strictlyIncreasingArray===",strictlyIncreasingArray(arr))    
+print("strictlyIncreasingArray===",strictlyIncreasingArray(arr))      
 
 # Ref : https://www.geeksforgeeks.org/check-whether-an-array-can-be-made-strictly-increasing-by-removing-at-most-one-element/
