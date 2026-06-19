@@ -1,3 +1,15 @@
+"""
+Input: val[] = [60, 100, 120], wt[] = [10, 20, 30], capacity = 50
+Output: 240.000000
+Explanation: By taking items of weight 10 and 20 kg and 2/3 fraction of 30 kg. Hence total price will be 60+100+(2/3)(120) = 240
+
+
+Input: val[] = [500], wt[] = [30], capacity = 10
+Output: 166.670000
+Explanation: Since the item’s weight exceeds capacity, we take a fraction 10/30 of it, yielding value 166.670000.
+"""
+
+
 def fractional_knapsack(values, weights, capacity):
     ratios = [ values/weight for values,weight in zip(values, weights)]
     
