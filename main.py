@@ -1,3 +1,21 @@
+"""
+Example 1:
+Input:
+ V = 70  
+Output:
+ 2  
+Explanation:
+  We need a 50 Rs note and a 20 Rs note.
+
+Example 2:
+Input:
+ V = 121  
+Output:
+ 3  
+Explanation:
+  We need a 100 Rs note, a 20 Rs note, and a 1 Rs coin.
+"""
+
 def minimum_number_of_coins(indian_currency, amount):
     required_coins = []
     for currency in indian_currency[::-1]:
