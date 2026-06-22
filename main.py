@@ -1,35 +1,27 @@
 """
-Input : lst =[1, 5, 3, 7, 9]
-        K = 12
-Output : [(5, 7), (3, 9)]
+Input: s="geeksforgeeks"
+Output: 'e'
+Explanation: 'e' occurs 4 times in the string
 
-
-int_array = [2,3,5,7,8,9]
-Output : [(2, 8), (3, 7)]
+Input: s="test"
+Output: 't'
+Explanation: 't' occurs 2 times in the string
 
 Ref:
-https://www.geeksforgeeks.org/python/python-program-to-find-all-possible-pairs-with-given-sum/
-
+https://www.geeksforgeeks.org/dsa/return-maximum-occurring-character-in-the-input-string-3/
 """
 
 
-def calculate_sum_of_array(int_array, target_sum):
-    int_array.sort()
-    left = 0
-    right = len(int_array)-1
-    correct_pairs = []
-    while left < right:
-        if ((int_array[left]+int_array[right]) == target_sum):
-            correct_pairs.append((int_array[left], int_array[right]))
-            left = left+1
-            right = right-1
-        elif (int_array[left]+int_array[right]) > target_sum:
-            right = right-1
+def get_max_occurance_of_character(input_str):
+    char_count_mapping = {}
+
+    for char in input_str:
+        if char in char_count_mapping.keys():
+            char_count_mapping[char] = char_count_mapping.get(char) + 1
         else:
-            left = left + 1
-    return correct_pairs
-
-int_array = [2,3,5,7,8,9]
-target = int(input("Please enter target value\n"))
-print("sum of pairs are : ", calculate_sum_of_array(int_array, target))
-
+            char_count_mapping[char] = 1
+    max_key = max(char_count_mapping, key=char_count_mapping.get)
+    return max_key, char_count_mapping[max_key]
+    
+s = "aaabbbcccccaaa"
+print("get_max_occurance_of_consecutive_character:::::>>>",get_max_occurance_of_character(s))
