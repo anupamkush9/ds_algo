@@ -14,6 +14,7 @@ https://www.geeksforgeeks.org/python/python-program-to-find-all-possible-pairs-w
 
 
 def calculate_sum_of_array(int_array, target_sum):
+    int_array.sort()
     left = 0
     right = len(int_array)-1
     correct_pairs = []
