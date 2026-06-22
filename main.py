@@ -17,10 +17,9 @@ def calculate_sum_of_array(int_array, target_sum):
     left = 0
     right = len(int_array)-1
     correct_pairs = []
-    while left <= right:
+    while left < right:
         if ((int_array[left]+int_array[right]) == target_sum):
-            if (left != right):
-                correct_pairs.append((int_array[left], int_array[right]))
+            correct_pairs.append((int_array[left], int_array[right]))
             left = left+1
             right = right-1
         elif (int_array[left]+int_array[right]) > target_sum:
