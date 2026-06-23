@@ -1,3 +1,15 @@
+"""
+n = 5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+"""
 # def draw_diamond(n):
 #     # for uppper 1st half
 #     for i in range(n):
