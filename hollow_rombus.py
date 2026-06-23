@@ -1,3 +1,12 @@
+"""
+Input : n = 4
+Output : 
+   ****
+  *  *
+ *  *
+****
+"""
+
 rows = 4
 
 for i in range(rows):
