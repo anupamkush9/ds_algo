@@ -1,41 +1,29 @@
 """
 Example 1:
-nums = [2, 3, 5, -2, 7, -4]  
-Output: 15  
-Explanation: The subarray from index 0 to index 4 has the largest sum = 15, which is the maximum sum of any contiguous subarray.
+Input: prices = {1, 1, 0, 1, 1, 1}
+Output: 3
+Explanation: There are two consecutive 1’s and three consecutive 1’s in the array out of which maximum is 3.
 
 Example 2:
-nums = [-2, -3, -7, -2, -10, -4]  
-Output: -2  
-Explanation: The largest sum is -2, which comes from taking the element at index 0 or index 3 as the subarray. Since all numbers are negative, the subarray with the least negative number gives the largest sum.
-
+Input: prices = {1, 0, 1, 1, 0, 1} 
+Output: 2
+Explanation: There are two consecutive 1's in the array. 
+            
 Ref :
-https://takeuforward.org/data-structure/kadanes-algorithm-maximum-subarray-sum-in-an-array
+https://takeuforward.org/data-structure/count-maximum-consecutive-ones-in-the-array
 
 """
 
-# Brute force approach
-def maxSubArray(nums):
-    maxi = 0
-    for i in range(len(nums)):
-        current_sum = 0
-        for j in range(i, len(nums)):
-            current_sum += nums[j]
-            if current_sum > maxi:
-                maxi = current_sum
-    return maxi
+def maxConsecutiveOnes(l):
+    maxvalue=0
+    count=0
+    for i in range(len(l)):
+        if l[i]==1:
+            count=count+1
+            maxvalue=max(count, maxvalue)
+        else:
+            count=0
+    return maxvalue
 
-# optimized approach using Kadane's algorithm
-def maxSubArray(nums): 
-    maxi = nums[0]
-    current_sum = 0
-    for i in range(len(nums)):
-        current_sum += nums[i]
-        if current_sum > maxi:
-            maxi = current_sum
-        if current_sum < 0:
-            current_sum = 0
-    return maxi
-
-numbers = [2, 3, 5, -2, 7, -4] 
-print(maxSubArray(numbers))  # Output: 15
+l = [1,2,3,3,1,1,1,2,1,2]
+print(maxConsecutiveOnes(l))
