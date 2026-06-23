@@ -7,16 +7,18 @@ INPUT:   [[1 , 2], [3 , 4], [5 , 6]];
 OUTPUT:  [1,2,3,4,5,6]
 """
 
-result = []
 
-def get_elements(list_):
-    for i in list_:
-        if type(i) != list:
-            result.append(i)
+def flatten_list(arr):
+    result = []
+
+    for item in arr:
+        if isinstance(item, list):
+            result.extend(flatten_list(item))   # recursive call
         else:
-            get_elements(i)
+            result.append(item)
+
     return result
 
-list_ = [1, 2, [3, [4, 5]]]
 
-print(get_elements(list_))
+arr = [1, [2, [3, 4], 5], [6, 7], 8]
+print(flatten_list(arr))
