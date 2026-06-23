@@ -1,5 +1,15 @@
-rows = 4
+"""
 
+Input : n = 4
+Output : 
+   ****
+  ****
+ ****
+****
+
+"""
+
+rows = 4
 for i in range(rows):
     for _ in range(rows-i-1):
         print(" ",end="")
