@@ -37,5 +37,13 @@ def maxSubArray(nums):
             current_sum = 0
     return maxi
 
+def maxSubArray(nums):
+    cur = max_sum = nums[0]
+    for i in range(1, len(nums)):
+        cur = max(nums[i], cur + nums[i])   # extend or restart
+        max_sum = max(max_sum, cur)
+
+    return max_sum
+
 numbers = [2, 3, 5, -2, 7, -4] 
 print(maxSubArray(numbers))  # Output: 15
