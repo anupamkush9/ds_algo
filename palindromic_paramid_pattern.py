@@ -1,3 +1,14 @@
+"""
+Input : Enter the row 5
+Output :
+    1
+   121
+  12321
+ 1234321
+123454321
+
+"""
+
 n = 5
 
 for i in range(1, n+1):
