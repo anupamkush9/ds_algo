@@ -1,29 +1,40 @@
 """
-Example 1:
-Input: prices = {1, 1, 0, 1, 1, 1}
-Output: 3
-Explanation: There are two consecutive 1’s and three consecutive 1’s in the array out of which maximum is 3.
+Input: s1 = “geeks”  s2 = “kseeg”
+Output: true
+Explanation: Both the string have same characters with same frequency. So, they are anagrams.
 
-Example 2:
-Input: prices = {1, 0, 1, 1, 0, 1} 
-Output: 2
-Explanation: There are two consecutive 1's in the array. 
-            
+Input: s1 = "allergy", s2 = "allergyy"
+Output: false
+Explanation: Although the characters are mostly the same, s2 contains an extra 'y' character. Since the frequency of characters differs, the strings are not anagrams.
+
+Input: s1 = "listen", s2 = "lists"
+Output: false
+Explanation: The characters in the two strings are not the same — some are missing or extra. So, they are not anagrams.     
+
 Ref :
-https://takeuforward.org/data-structure/count-maximum-consecutive-ones-in-the-array
+https://takeuforward.org/data-structure/check-if-two-strings-are-anagrams-of-each-other
+https://www.geeksforgeeks.org/dsa/check-whether-two-strings-are-anagram-of-each-other/
 
 """
 
-def maxConsecutiveOnes(l):
-    maxvalue=0
-    count=0
-    for i in range(len(l)):
-        if l[i]==1:
-            count=count+1
-            maxvalue=max(count, maxvalue)
-        else:
-            count=0
-    return maxvalue
+def areAnagrams(s1, s2):
+    
+    if len(s1) != len(s2):
+        return False
+    
+    # Sort both strings
+    s1 = sorted(s1)
+    s2 = sorted(s2)
 
-l = [1,2,3,3,1,1,1,2,1,2]
-print(maxConsecutiveOnes(l))
+    # Compare sorted strings
+    return s1 == s2
+
+if __name__ == "__main__":
+    
+    s1 = "geeks"
+    s2 = "kseeg"
+    
+    if(areAnagrams(s1,s2)):
+        print("true")
+    else:
+        print("false")
