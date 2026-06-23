@@ -12,9 +12,8 @@ Result: 2
 Explanation: In the given array, number 2 is missing. So, 2 is the answer.
 
 Ref :
-https://takeuforward.org/data-structure/check-if-two-strings-are-anagrams-of-each-other
-https://www.geeksforgeeks.org/dsa/check-whether-two-strings-are-anagram-of-each-other/
-
+https://takeuforward.org/arrays/find-the-missing-number-in-an-array
+https://www.geeksforgeeks.org/dsa/find-the-missing-number/
 """
 
 
