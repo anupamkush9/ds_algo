@@ -13,23 +13,26 @@ Explanation: The entire string "aabaaab" has exactly 2 unique characters 'a' and
 
 """
 
-# largest subarray of sum k by sliding window
 def longest_substring_with_k_unique_characters(array, k):
-    dict = {}
+    freq = {}
+    left = 0
     max_len = 0
-    arr_len = len(array)
-    left, right = 0, 0
-    while right < arr_len:
-        dict[array[right]] = dict.get(array[right], 0)+1
-        if len(dict.keys()) == k:
-            max_len = sum([val for key,val in dict.items()])
-        while len(dict.keys()) > k:
-            if array[left] in dict.keys():
-                del dict[array[left]]
+
+    for right in range(len(array)):
+        freq[array[right]] = freq.get(array[right], 0) + 1
+
+        while len(freq) > k:
+            freq[array[left]] -= 1
+            if freq[array[left]] == 0:
+                del freq[array[left]]
             left += 1
-        right += 1  
+
+        if len(freq) == k:
+            max_len = max(max_len, right - left + 1)
+
     return max_len
-        
+
+
 arr = "aabbcc"
 k = 1
 # Output: 2
