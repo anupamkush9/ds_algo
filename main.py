@@ -1,36 +1,41 @@
 """
 Example 1:
-Input:
- S = "abcddabac"  
-Output:
- 4  
-Explanation:
- The longest substring with distinct characters is "abcd", which has a length of 4.
+nums = [2, 3, 5, -2, 7, -4]  
+Output: 15  
+Explanation: The subarray from index 0 to index 4 has the largest sum = 15, which is the maximum sum of any contiguous subarray.
 
 Example 2:
-Input:
- S = "aaabbbccc"  
-Output:
- 2  
-Explanation:
- The longest substrings with distinct characters are "ab" and "bc", both having a length of 2.
- 
-Ref : https://takeuforward.org/data-structure/length-of-longest-substring-without-any-repeating-character 
+nums = [-2, -3, -7, -2, -10, -4]  
+Output: -2  
+Explanation: The largest sum is -2, which comes from taking the element at index 0 or index 3 as the subarray. Since all numbers are negative, the subarray with the least negative number gives the largest sum.
+
+Ref :
+https://takeuforward.org/data-structure/kadanes-algorithm-maximum-subarray-sum-in-an-array
+
 """
 
-def calc_longest_substring(input_str):
-    max_length_sub_str = 0
-    unique_array = []
-    for char in input_str:
-        if char not in unique_array:
-            unique_array.append(char)
-            unique_array_length = len(unique_array)
-            if max_length_sub_str <= unique_array_length:
-                max_length_sub_str = unique_array_length
-        else:
-            unique_array = [char]
-    return max_length_sub_str
+# Brute force approach
+def maxSubArray(nums):
+    maxi = 0
+    for i in range(len(nums)):
+        current_sum = 0
+        for j in range(i, len(nums)):
+            current_sum += nums[j]
+            if current_sum > maxi:
+                maxi = current_sum
+    return maxi
 
+# optimized approach using Kadane's algorithm
+def maxSubArray(nums): 
+    maxi = nums[0]
+    current_sum = 0
+    for i in range(len(nums)):
+        current_sum += nums[i]
+        if current_sum > maxi:
+            maxi = current_sum
+        if current_sum < 0:
+            current_sum = 0
+    return maxi
 
-input_str = "abcabcbaa"
-print("------>", calc_longest_substring(input_str))
+numbers = [2, 3, 5, -2, 7, -4] 
+print(maxSubArray(numbers))  # Output: 15
