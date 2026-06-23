@@ -1,36 +1,36 @@
-# largest subarray of sum k by sliding window
+"""
+Example 1:
+Input:
+ S = "abcddabac"  
+Output:
+ 4  
+Explanation:
+ The longest substring with distinct characters is "abcd", which has a length of 4.
 
-def longest_substring_with_k_unique_characters(array, k):
-    dict = {}
-    max_len = 0
-    arr_len = len(array)
-    left, right = 0, 0
-    while right < arr_len:
-        dict[array[right]] = dict.get(array[right], 0)+1
-        if len(dict.keys()) == k:
-            max_len = sum([val for key,val in dict.items()])
-        while len(dict.keys()) > k:
-            if array[left] in dict.keys():
-                del dict[array[left]]
-            left += 1
-        right += 1  
-    return max_len
-        
-arr = "aabbcc"
-k = 1
-# Output: 2
-# Explanation: Max substring can be any one from {“aa” , “bb” , “cc”}.
+Example 2:
+Input:
+ S = "aaabbbccc"  
+Output:
+ 2  
+Explanation:
+ The longest substrings with distinct characters are "ab" and "bc", both having a length of 2.
+ 
+Ref : https://takeuforward.org/data-structure/length-of-longest-substring-without-any-repeating-character 
+"""
 
-# arr = "aabbcc"
-# k = 2
-# Output: 4
-# Explanation: Max substring can be any one from {“aabb” , “bbcc”}.
-# arr = "aabbcc"
-# k = 3
-# Output: 6
-print("------>",longest_substring_with_k_unique_characters(arr, k))
-# Question Ref:
-# https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/
+def calc_longest_substring(input_str):
+    max_length_sub_str = 0
+    unique_array = []
+    for char in input_str:
+        if char not in unique_array:
+            unique_array.append(char)
+            unique_array_length = len(unique_array)
+            if max_length_sub_str <= unique_array_length:
+                max_length_sub_str = unique_array_length
+        else:
+            unique_array = [char]
+    return max_length_sub_str
 
-# https://www.youtube.com/watch?v=Lav6St0W_pQ&list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj&index=10
-# Above video title -->>  Longest Substring With K Unique Characters | Variable Size Sliding Window
+
+input_str = "abcabcbaa"
+print("------>", calc_longest_substring(input_str))
