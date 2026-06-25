@@ -1,68 +1,58 @@
+
 """
+# ============================================================
+# Previous Smaller Element / Nearest Smaller Element on Left
+# ============================================================
 
-Input: N = 5, arr[] = {2,6,5,8,11}, target = 14
-Output : YES
-Explanation: arr[1] + arr[3] = 14. So, the answer is “YES” for first variant for second variant output will be : [1,3].
+# Problem:
+# For every element in array, find nearest smaller element on left.
+# If not found, return -1.
 
-Input: N = 5, arr[] = {2,6,5,8,11}, target = 15
-Output : NO.
-Explanation: There exist no such two numbers whose sum is equal to the target. 
+# Example:
+# arr = [1, 5, 0, 3, 4, 5]
+# output = [-1, 1, -1, 0, 3, 4]
 
-Ref : https://takeuforward.org/data-structure/two-sum-check-if-a-pair-with-given-sum-exists-in-array
-https://interviewing.io/questions/two-sum
+Input: arr[] = [1, 6, 2]
+Output: [-1, 1, 1]
+
+# https://www.geeksforgeeks.org/dsa/find-the-nearest-smaller-numbers-on-left-side-in-an-array/
+
 """
+def prevSmaller_bruteforce(arr):
+    n = len(arr)
+    result = [-1] * n
+
+    for i in range(n):
+        for j in range(i - 1, -1, -1):
+            if arr[j] < arr[i]:
+                result[i] = arr[j]
+                break
+
+    return result
 
 
-class SolutionBruteForce:
-    def twoSum(self, nums, target):
-        for i in range(len(nums)):
-            for j in range(i + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i, j]
-        return []
+def prevSmaller_stack(arr):
+    result = []
+    stack = []
 
+    for num in arr:
+        while stack and stack[-1] >= num:
+            stack.pop()
 
-class SolutionTwoPointers:
-    def twoSum(self, nums, target):
-        arr = [(nums[i], i) for i in range(len(nums))]
-        arr.sort()
+        if stack:
+            result.append(stack[-1])
+        else:
+            result.append(-1)
 
-        left, right = 0, len(arr) - 1
+        stack.append(num)
 
-        while left < right:
-            curr_sum = arr[left][0] + arr[right][0]
-
-            if curr_sum == target:
-                return [arr[left][1], arr[right][1]]
-            elif curr_sum < target:
-                left += 1
-            else:
-                right -= 1
-
-        return []
-
-
-class SolutionHashMap:
-    def twoSum(self, nums, target):
-        num_to_index = {}
-
-        for i in range(len(nums)):
-            complement = target - nums[i]
-
-            if complement in num_to_index:
-                return [num_to_index[complement], i]
-
-            num_to_index[nums[i]] = i
-
-        return []
+    return result
 
 
 # ------------------------------------------------------------
 # Driver Code
 # ------------------------------------------------------------
-nums = [2, 7, 11, 15]
-target = 9
+arr = [1, 5, 0, 3, 4, 5]
 
-print("Approach 1:", SolutionBruteForce().twoSum(nums, target))
-print("Approach 2:", SolutionTwoPointers().twoSum(nums, target))
-print("Approach 3:", SolutionHashMap().twoSum(nums, target))
+print("Brute Force :", prevSmaller_bruteforce(arr))
+print("Stack       :", prevSmaller_stack(arr))
