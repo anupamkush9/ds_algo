@@ -1,58 +1,51 @@
 
 """
-# ============================================================
-# Previous Smaller Element / Nearest Smaller Element on Left
-# ============================================================
+Input: arr[] = {1,2,3,4,5,6,7,8,5,1}
+Output: 7
+Explanation: There is only 1 peak element, 8,  that is at index 7.
 
-# Problem:
-# For every element in array, find nearest smaller element on left.
-# If not found, return -1.
-
-# Example:
-# arr = [1, 5, 0, 3, 4, 5]
-# output = [-1, 1, -1, 0, 3, 4]
-
-Input: arr[] = [1, 6, 2]
-Output: [-1, 1, 1]
-
-# https://www.geeksforgeeks.org/dsa/find-the-nearest-smaller-numbers-on-left-side-in-an-array/
+https://takeuforward.org/data-structure/peak-element-in-array
 
 """
-def prevSmaller_bruteforce(arr):
-    n = len(arr)
-    result = [-1] * n
+class SolutionB:
+    def findPeakElement(self, nums):
+        n = len(nums)
+        ans = [-1]
+        for i in range(n):
 
-    for i in range(n):
-        for j in range(i - 1, -1, -1):
-            if arr[j] < arr[i]:
-                result[i] = arr[j]
-                break
+            left = float('-inf') if i == 0 else nums[i - 1]
+            right = float('-inf') if i == n - 1 else nums[i + 1]
 
-    return result
+            if nums[i] > left and nums[i] > right:
+                ans.append(i)
+        return max(ans)
 
+class Solution:
+    def findPeakElement(self, nums):
+        low, high = 0, len(nums) - 1
 
-def prevSmaller_stack(arr):
-    result = []
-    stack = []
+        while low < high:
+            mid = (low + high) // 2
 
-    for num in arr:
-        while stack and stack[-1] >= num:
-            stack.pop()
+            if nums[mid] > nums[mid + 1]:
+                # slope going down → peak is on left side (including mid)
+                high = mid
+            else:
+                # slope going up → peak is on right side
+                low = mid + 1
 
-        if stack:
-            result.append(stack[-1])
-        else:
-            result.append(-1)
-
-        stack.append(num)
-
-    return result
+        # low == high → peak index
+        return low
 
 
-# ------------------------------------------------------------
+
 # Driver Code
-# ------------------------------------------------------------
-arr = [1, 5, 0, 3, 4, 5]
+nums = [1, 2, 1, 3, 5, 6, 4]
+objb = SolutionB()
+print(objb.findPeakElement(nums))
 
-print("Brute Force :", prevSmaller_bruteforce(arr))
-print("Stack       :", prevSmaller_stack(arr))
+nums = [1, 2, 1, 3, 5, 6, 4]
+obj = Solution()
+print(obj.findPeakElement(nums))  # 5
+
+
