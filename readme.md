@@ -64,6 +64,7 @@
 18. [find_the_missing_number_in_array_by_xor_operator_and_hashing](https://github.com/anupamkush9/ds_algo/tree/find_the_missing_number_in_array_by_xor_operator_and_hashing)
 19. [top_k_frequent_element_in_array](https://github.com/anupamkush9/ds_algo/tree/top_k_frequent_element_in_array)
 20. [product-of-array-except-self](https://github.com/anupamkush9/ds_algo/tree/product-of-array-except-self)
+21. [peak-index-in-moutain-array](https://github.com/anupamkush9/ds_algo/tree/peak-index-in-moutain-array)
 
 ---
 
