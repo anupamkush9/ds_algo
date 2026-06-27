@@ -1,51 +1,84 @@
+"""
+
+Problem: Product of Array Except Self
+
+Input: N = 5, array[] = {1,2,3,4,5}
+Output: 120 60 40 30 24
+
+Input:  [10, 3, 5, 6, 2]
+Output: [180, 600, 360, 300, 900]
+
+https://www.geeksforgeeks.org/dsa/a-product-array-puzzle/
+https://www.geeksforgeeks.org/dsa/a-product-array-puzzle/
+
 
 """
-Input: arr[] = {1,2,3,4,5,6,7,8,5,1}
-Output: 7
-Explanation: There is only 1 peak element, 8,  that is at index 7.
 
-https://takeuforward.org/data-structure/peak-element-in-array
+def method1_brute(arr):
+    n = len(arr)
+    res = []
+    for i in range(n):
+        for j in range(n):
+            if i != j:
+                res[i] *= arr[j]
+    return res
 
-"""
-class SolutionB:
-    def findPeakElement(self, nums):
-        n = len(nums)
-        ans = [-1]
-        for i in range(n):
 
-            left = float('-inf') if i == 0 else nums[i - 1]
-            right = float('-inf') if i == n - 1 else nums[i + 1]
+def method2_prefix_suffix(arr):
+    n = len(arr)
+    prefix = [1] * n
+    suffix = [1] * n
+    res    = [0] * n
 
-            if nums[i] > left and nums[i] > right:
-                ans.append(i)
-        return max(ans)
+    for i in range(1, n):
+        prefix[i] = arr[i - 1] * prefix[i - 1]
 
-class Solution:
-    def findPeakElement(self, nums):
-        low, high = 0, len(nums) - 1
+    for j in range(n - 2, -1, -1):
+        suffix[j] = arr[j + 1] * suffix[j + 1]
 
-        while low < high:
-            mid = (low + high) // 2
+    for i in range(n):
+        res[i] = prefix[i] * suffix[i]
 
-            if nums[mid] > nums[mid + 1]:
-                # slope going down → peak is on left side (including mid)
-                high = mid
-            else:
-                # slope going up → peak is on right side
-                low = mid + 1
+    return res
 
-        # low == high → peak index
-        return low
 
+def productArray_division(arr):
+
+    zero_count = 0
+    product = 1
+
+    # Count zeros and multiply non-zero elements
+    for num in arr:
+        if num == 0:
+            zero_count += 1
+        else:
+            product *= num
+
+    result = []
+
+    if zero_count > 1:
+        return [0] * len(arr)
+
+    for num in arr:
+
+        if zero_count == 0:
+            result.append(product // num)
+
+        elif num == 0:
+            result.append(product)
+
+        else:
+            result.append(0)
+
+    return result
 
 
 # Driver Code
-nums = [1, 2, 1, 3, 5, 6, 4]
-objb = SolutionB()
-print(objb.findPeakElement(nums))
+arr = [10, 3, 5, 6, 2]
+print(productArray_division(arr))
 
-nums = [1, 2, 1, 3, 5, 6, 4]
-obj = Solution()
-print(obj.findPeakElement(nums))  # 5
+arr = [1, 2, 0, 4]
+print(productArray_division(arr))
 
-
+arr = [1, 0, 2, 0]
+print(productArray_division(arr))
