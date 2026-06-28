@@ -13,18 +13,18 @@ Explanation: Since the array is sorted in increasing order, we can make maximum 
 
 Ref:
 https://www.geeksforgeeks.org/dsa/best-time-to-buy-and-sell-stock/
+https://takeuforward.org/data-structure/stock-buy-and-sell
 """
 
 
 def maxProfit(prices):
     minSoFar = prices[0]
     max_profit = 0
-
     for i in range(1, len(prices)):
-        # Update the minimum value seen so far  
-        minSoFar = min(minSoFar, prices[i])
-        # Update result if we get more profit                
-        max_profit = max(max_profit, prices[i] - minSoFar)
+        if minSoFar > prices[i]:
+            minSoFar = prices[i]
+        else:
+            max_profit = max(max_profit, prices[i] - minSoFar)
     return max_profit
 
 # Driver code
