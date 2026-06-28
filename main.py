@@ -15,20 +15,17 @@ Ref:
 https://www.geeksforgeeks.org/dsa/best-time-to-buy-and-sell-stock/
 """
 
-def maxProfit(prices, n):
-    buy = prices[0]
+
+def maxProfit(prices):
+    minSoFar = prices[0]
     max_profit = 0
-    for i in range(1, n):
 
-        # Checking for lower buy value
-        if (buy > prices[i]):
-            buy = prices[i]
-
-        # Checking for higher profit
-        elif (prices[i] - buy > max_profit):
-            max_profit = prices[i] - buy
+    for i in range(1, len(prices)):
+        # Update the minimum value seen so far  
+        minSoFar = min(minSoFar, prices[i])
+        # Update result if we get more profit                
+        max_profit = max(max_profit, prices[i] - minSoFar)
     return max_profit
-
 
 # Driver code
 if __name__ == '__main__':
