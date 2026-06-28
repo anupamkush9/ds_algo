@@ -34,7 +34,7 @@ def get_intersection_elements(A, B):
     left_len = len(A)-1
     right_len = len(B)-1
     intersection_elements = []
-    while left < left_len or right < right_len:
+    while left < left_len and right < right_len:
         if A[left] == B[right]:
             intersection_elements.append(A[left])
             left += 1
