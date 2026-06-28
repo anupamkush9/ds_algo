@@ -1,48 +1,63 @@
 """
-Input: arr[] = [1, 4, 45, 6, 10, 8], target = 13
-Output: true
-Explanation: The triplet [1, 4, 8] sums up to 13
 
-Input: arr[] = [1, 2, 4, 3, 6, 7], target = 10 
-Output: true
-Explanation: The triplets [1, 3, 6] and [1, 2, 7] both sum to 10. 
+Input: arr[] = [10, 2, 3, 4, 5, 7, 8], target = 23 
+Output: [[2, 3, 8, 10], [2, 4, 7, 10], [3, 5, 7, 8]] 
+Explanation: There are only three distinct quadruplets with sum = 23.
 
-Input: arr[] = [40, 20, 10, 3, 6, 7], sum = 24 
-Output: false
-Explanation:  No triplet in the array sums to 24.
+
+Input Format: arr[] = [4,3,3,4,4,2,1,2,1,1], target = 9
+Result: [[1,1,3,4],[1,2,2,4],[1,2,3,3]]
+Explanation: The sum of all the quadruplets is equal to the target i.e. 9.
+
 
 Ref:
-https://www.geeksforgeeks.org/dsa/find-a-triplet-that-sum-to-a-given-value/
+https://takeuforward.org/data-structure/4-sum-find-quads-that-add-up-to-a-target-value
+https://www.geeksforgeeks.org/dsa/find-four-elements-that-sum-to-a-given-value-set-2/
 
 """
 
-def hasTripletSum(arr, target):
-    n = len(arr)
-    arr.sort()
-    
-    # Fix the first element as arr[i]
-    for i in range(n - 2):
-        
-        # Initialize left and right pointers with 
-        # start and end of remaining subarray
-        l = i + 1
-        r = n - 1
-        
-        requiredSum = target - arr[i]
-        while l < r:
-            if arr[l] + arr[r] == requiredSum:
-                return True
-            if arr[l] + arr[r] < requiredSum:
-                l += 1
-            else:
-                r -= 1
-    
-    return False
+class Solution:
+    # Function to find all unique quadruplets
+    def fourSum(self, arr, target):
+        n = len(arr)
+        arr.sort()
+        ans = []
 
-if __name__ == "__main__":
-    arr = [1, 4, 45, 6, 10, 8]
-    target = 13
-    if hasTripletSum(arr, target):
-        print("true")
-    else:
-        print("false")
+        # Step 1: First loop for first number
+        for i in range(n):
+            if i > 0 and arr[i] == arr[i - 1]:
+                continue
+
+            # Step 2: Second loop for second number
+            for j in range(i + 1, n):
+                if j > i + 1 and arr[j] == arr[j - 1]:
+                    continue
+
+                # Step 3: Two pointers
+                left, right = j + 1, n - 1
+                while left < right:
+                    total = arr[i] + arr[j] + arr[left] + arr[right]
+
+                    if total == target:
+                        ans.append([arr[i], arr[j], arr[left], arr[right]])
+
+                        while left < right and arr[left] == arr[left + 1]:
+                            left += 1
+                        while left < right and arr[right] == arr[right - 1]:
+                            right -= 1
+
+                        left += 1
+                        right -= 1
+                    elif total < target:
+                        left += 1
+                    else:
+                        right -= 1
+        return ans
+
+
+# Driver code
+arr = [1, 0, -1, 0, -2, 2]
+target = 0
+
+obj = Solution()
+print(obj.fourSum(arr, target))
