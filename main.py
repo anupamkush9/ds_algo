@@ -1,5 +1,19 @@
-# Python program for the above approach:
+"""
+Input: prices[] = [7, 10, 1, 3, 6, 9, 2]
+Output: 8
+Explanation: Buy for price 1 and sell for price 9. 
 
+Input: prices[] = [7, 6, 4, 3, 1]
+Output: 0
+Explanation: Since the array is sorted in decreasing order, 0 profit can be made without making any transaction.
+
+Input: prices[] = [1, 3, 6, 9, 11]
+Output: 10
+Explanation: Since the array is sorted in increasing order, we can make maximum profit by buying at price[0] and selling at price[n-1]
+
+Ref:
+https://www.geeksforgeeks.org/dsa/best-time-to-buy-and-sell-stock/
+"""
 
 def maxProfit(prices, n):
     buy = prices[0]
