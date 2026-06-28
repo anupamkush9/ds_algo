@@ -31,8 +31,7 @@ def maxProfit(prices):
 if __name__ == '__main__':
 
     prices = [7, 1, 5, 6, 4]
-    n = len(prices)
-    max_profit = maxProfit(prices, n)
+    max_profit = maxProfit(prices)
     print(max_profit)
 
 # ref: 
