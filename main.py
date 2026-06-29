@@ -12,16 +12,17 @@ https://www.geeksforgeeks.org/dsa/python-program-for-quicksort/
 https://youtu.be/8MNB0Mba_Dc?si=NrMYiWApTuTA5Tw4
 """
 
-def quicksort(arr):
+def quick_sort(arr):
     if len(arr) <= 1:
         return arr
     
-    pivot = arr[-1]
-    left = [x for x in arr[:-1] if x <= pivot]
-    right = [x for x in arr[:-1] if x > pivot]
+    pivot = arr[0]
+    left   = [x for x in arr if x < pivot]   # Less than pivot
+    middle = [x for x in arr if x == pivot]  # Equal to pivot (all duplicates)
+    right  = [x for x in arr if x > pivot]   # Greater than pivot
     
-    return quicksort(left) + [pivot] + quicksort(right)
+    return quick_sort(left) + middle + quick_sort(right)
 
-# Example
-arr = [3, 6, 8, 10, 1, 2, 1]
-print(quicksort(arr))  # [1, 1, 2, 3, 6, 8, 10]
+arr = [1, 7, 4, 1, 10, 9, -2]
+arr = quick_sort(arr)
+print(arr)  # [-2, 1, 1, 4, 7, 9, 10]
