@@ -1,15 +1,15 @@
 """
-Input: N = 5, Arr[] = {4,1,7,9,3}
-Output: {1, 3, 4, 7, 9}
-Explanation: After sorting the array in ascending order it becomes 1, 3, 4, 7, 9
+Input: arr[] = [10, 5, 4, 3, 48, 6, 2, 33, 53, 10], k = 4
+Output: 5
+Explanation: 4th smallest element in the given array is 5.
 
-Input: N = 8, Arr[] = {4,6,2,5,7,9,1,3}
-Output: {1, 2, 3, 4, 5, 6, 7, 9}
-Explanation: After sorting the array in ascending order it becomes 1, 2, 3, 4, 5, 6, 7, 9
+Input: arr[] = [7, 10, 4, 3, 20, 15], k = 3
+Output: 7
+Explanation: 3rd smallest element in the given array is 7.
 
-Ref:
-https://www.geeksforgeeks.org/dsa/python-program-for-quicksort/
-https://youtu.be/8MNB0Mba_Dc?si=NrMYiWApTuTA5Tw4
+Ref :
+https://www.geeksforgeeks.org/dsa/kth-smallest-largest-element-in-unsorted-array/
+
 """
 
 def quicksort(arr):
@@ -22,6 +22,9 @@ def quicksort(arr):
     
     return quicksort(left) + [pivot] + quicksort(right)
 
-# Example
+def get_kth_smallest(arr, k):
+    sorted_arr = quicksort(arr)
+    return sorted_arr[k - 1]  # k is 1-based index
+
 arr = [3, 6, 8, 10, 1, 2, 1]
-print(quicksort(arr))  # [1, 1, 2, 3, 6, 8, 10]
+print(get_kth_smallest(arr, 4))  # 3
