@@ -68,6 +68,7 @@
 22. [best_time_to_buy_and_sell_stock](https://github.com/anupamkush9/ds_algo/tree/best_time_to_buy_and_sell_stock)
 23. [triplet-that-sum-to-a-given-value](https://github.com/anupamkush9/ds_algo/tree/triplet-that-sum-to-a-given-value)
 24. [four-element-that-sum-to-a-given-value](https://github.com/anupamkush9/ds_algo/tree/four-element-that-sum-to-a-given-value)
+25. [previous-smaller-element](https://github.com/anupamkush9/ds_algo/blob/previous-smaller-element/main.py)
 
 ---
 
