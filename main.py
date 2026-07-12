@@ -1,3 +1,16 @@
+"""
+Example 1:
+Input Format: N = 5, array[] = {1,2,4,5}
+Result: 3
+Explanation: In the given array, number 3 is missing. So, 3 is the answer.
+
+
+Example 2:
+Input Format: N = 3, array[] = {1,3}
+Result: 2
+Explanation: In the given array, number 2 is missing. So, 2 is the answer.
+"""
+
 def get_missing_number_by_hashing(l):
     length_Of_arr = len(l) + 2
     hash_arr = [0]*length_Of_arr
