@@ -27,7 +27,7 @@ def fractional_knapsack(values, weights, capacity):
         else:
             fraction = (capacity-current_capacity)/weight
             max_value += fraction*value
-            current_capacity += weight
+            current_capacity += fraction * weight
             taken_items.append(fraction)
             break
     return max_value, taken_items            
