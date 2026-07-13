@@ -18,10 +18,13 @@ Explanation:
 
 def minimum_number_of_coins(indian_currency, amount):
     required_coins = []
-    for currency in indian_currency[::-1]:
-        while amount >= currency:
-            required_coins.append(currency)
-            amount -= currency
+    for currency in reversed(indian_currency):
+        if amount == 0:
+            break
+        count = amount // currency
+        if count:
+            required_coins.extend([currency] * count)
+            amount %= currency
     return required_coins
             
 indian_currency = [1, 2, 5, 10, 20, 50, 100, 200, 500, 2000]
