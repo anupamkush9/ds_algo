@@ -1,49 +1,34 @@
 """
-Input: s = "geeksforgeeks"
-Output: 'f'
-Explanation: 'f' is the first character in the string which does not repeat.
+Input:  {'a': 1, 'b': 2, 'c': {'d': 1, 'e': 2}}
+Output: {'a': 1, 'b': 2, 'd': 1, 'e': 2}
 
-Input: s = "racecar"
-Output: 'e'
-Explanation: 'e' is the only character in the string which does not repeat.
+Input:  {'x': 1, 'y': {'z': 2, 'w': {'p': 3, 'q': 4}}}
+Output: {'x': 1, 'z': 2, 'p': 3, 'q': 4}
 
-Input: "aabbccc"
-Output: '$'
-Explanation: All the characters in the given string are repeating.
+Input:  {'a': 1, 'b': {'a': 99}}
+Output: {'a': 99}   # collision: nested 'a' overwrites top-level 'a'
 
-Ref :
-https://www.geeksforgeeks.org/dsa/given-a-string-find-its-first-non-repeating-character/
+Input:  {'a': {'b': {'c': {'d': 1}}}}
+Output: {'d': 1}    # deeply nested, still flattens fully
+
+Input:  {}
+Output: {}          # empty dict stays empty
+
+Input:  {'a': 1, 'b': 2}
+Output: {'a': 1, 'b': 2}   # no nesting, unchanged
 """
 
-# Time Complexity: O(n)
-# Space Complexity: O(n)
-def first_non_repeating_char(s):
-    char_count = {}
+def flatten_dict(d):
+    result = {}
+    for key, value in d.items():
+        if isinstance(value, dict):
+            result.update(flatten_dict(value))  # merge nested dict's keys
+        else:
+            result[key] = value
+    return result
 
-    # Count frequency of each character
-    for char in s:
-        char_count[char] = char_count.get(char, 0) + 1
-
-    # Find first character with frequency 1
-    for char in s:
-        if char_count[char] == 1:
-            return char
-    return None
-
-string = "aabbcdde"
-result = first_non_repeating_char(string)
-
-if result:
-    print("First non-repeating character:", result)
-else:
-    print("No non-repeating character found")
-
-
-# Time Complexity: O(n²)
-# def first_non_repeating_char(s):
-#     for char in s:
-#         if s.count(char) == 1:
-#             return char
-#     return None
-
-# print(first_non_repeating_char("aabbcdde"))
+# Example
+input_dict = {'a': 1, 'b': 2, 'c': {'d': 1, 'e': 2}}
+output = flatten_dict(input_dict)
+print(output)
+# Output: {'a': 1, 'b': 2, 'd': 1, 'e': 2}
