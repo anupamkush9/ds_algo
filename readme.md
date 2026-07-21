@@ -30,6 +30,8 @@
 23. [find_the_length_of_string](https://github.com/anupamkush9/ds_algo/tree/find_the_length_of_string)
 24. [merge_sort_by_recursion](https://github.com/anupamkush9/ds_algo/tree/merge_sort_by_recursion)
 25. [flatten_the_list](https://github.com/anupamkush9/ds_algo/tree/flatten_the_list)
+26. [flatten-the-dict](https://github.com/anupamkush9/ds_algo/tree/flatten-the-dict)
+
 ---
 
 ### 3) Linked list
