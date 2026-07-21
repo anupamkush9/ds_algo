@@ -1,30 +1,49 @@
 """
-Input: arr[] = [10, 5, 4, 3, 48, 6, 2, 33, 53, 10], k = 4
-Output: 5
-Explanation: 4th smallest element in the given array is 5.
+Input: s = "geeksforgeeks"
+Output: 'f'
+Explanation: 'f' is the first character in the string which does not repeat.
 
-Input: arr[] = [7, 10, 4, 3, 20, 15], k = 3
-Output: 7
-Explanation: 3rd smallest element in the given array is 7.
+Input: s = "racecar"
+Output: 'e'
+Explanation: 'e' is the only character in the string which does not repeat.
+
+Input: "aabbccc"
+Output: '$'
+Explanation: All the characters in the given string are repeating.
 
 Ref :
-https://www.geeksforgeeks.org/dsa/kth-smallest-largest-element-in-unsorted-array/
-
+https://www.geeksforgeeks.org/dsa/given-a-string-find-its-first-non-repeating-character/
 """
 
-def quicksort(arr):
-    if len(arr) <= 1:
-        return arr
-    
-    pivot = arr[-1]
-    left = [x for x in arr[:-1] if x <= pivot]
-    right = [x for x in arr[:-1] if x > pivot]
-    
-    return quicksort(left) + [pivot] + quicksort(right)
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+def first_non_repeating_char(s):
+    char_count = {}
 
-def get_kth_smallest(arr, k):
-    sorted_arr = quicksort(arr)
-    return sorted_arr[k - 1]  # k is 1-based index
+    # Count frequency of each character
+    for char in s:
+        char_count[char] = char_count.get(char, 0) + 1
 
-arr = [3, 6, 8, 10, 1, 2, 1]
-print(get_kth_smallest(arr, 4))  # 3
+    # Find first character with frequency 1
+    for char in s:
+        if char_count[char] == 1:
+            return char
+    return None
+
+string = "aabbcdde"
+result = first_non_repeating_char(string)
+
+if result:
+    print("First non-repeating character:", result)
+else:
+    print("No non-repeating character found")
+
+
+# Time Complexity: O(n²)
+# def first_non_repeating_char(s):
+#     for char in s:
+#         if s.count(char) == 1:
+#             return char
+#     return None
+
+# print(first_non_repeating_char("aabbcdde"))
