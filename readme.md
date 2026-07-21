@@ -125,8 +125,11 @@
 1. [Diamond_printing_pattern](https://github.com/anupamkush9/ds_algo/tree/Diamond_printing_pattern)
 2. [all_pattern_program_with_different_logics](https://github.com/anupamkush9/ds_algo/tree/all_pattern_program_with_different_logics)
 
+---
 
 ### 12) Backtracking
 1. [find_subset_of_a_string_by_backtracking](https://github.com/anupamkush9/ds_algo/tree/find_subset_of_a_string_by_backtracking)
 
+### 13) String
+1. [first-non-repeating-character-in-string](https://github.com/anupamkush9/ds_algo/blob/first-non-repeating-character-in-string)
 
