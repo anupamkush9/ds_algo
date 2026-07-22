@@ -1,34 +1,34 @@
 """
-Input:  {'a': 1, 'b': 2, 'c': {'d': 1, 'e': 2}}
-Output: {'a': 1, 'b': 2, 'd': 1, 'e': 2}
+ Input:
+ [
+     ("sam", 10), ("Amit", 30), ("samar", 50),
+     ("sam", 70), ("samar", 20), ("sam", 90),
+     ("Ankit", 50), ("sam", 30), ("Amit", 50),
+     ("Ankit", 10)
+ ]
 
-Input:  {'x': 1, 'y': {'z': 2, 'w': {'p': 3, 'q': 4}}}
-Output: {'x': 1, 'z': 2, 'p': 3, 'q': 4}
-
-Input:  {'a': 1, 'b': {'a': 99}}
-Output: {'a': 99}   # collision: nested 'a' overwrites top-level 'a'
-
-Input:  {'a': {'b': {'c': {'d': 1}}}}
-Output: {'d': 1}    # deeply nested, still flattens fully
-
-Input:  {}
-Output: {}          # empty dict stays empty
-
-Input:  {'a': 1, 'b': 2}
-Output: {'a': 1, 'b': 2}   # no nesting, unchanged
+ Output:
+ {
+     'sam': 200,
+     'Amit': 80,
+     'samar': 70,
+     'Ankit': 60
+ }
+ 
 """
 
-def flatten_dict(d):
+def sum_by_name(data):
     result = {}
-    for key, value in d.items():
-        if isinstance(value, dict):
-            result.update(flatten_dict(value))  # merge nested dict's keys
-        else:
-            result[key] = value
+    for name, amount in data:
+        result[name] = result.get(name, 0) + amount
     return result
 
 # Example
-input_dict = {'a': 1, 'b': 2, 'c': {'d': 1, 'e': 2}}
-output = flatten_dict(input_dict)
+input_data = [
+    ("sam", 10), ("Amit", 30), ("samar", 50), ("sam", 70),
+    ("samar", 20), ("sam", 90), ("Ankit", 50), ("sam", 30),
+    ("Amit", 50), ("Ankit", 10)
+]
+
+output = sum_by_name(input_data)
 print(output)
-# Output: {'a': 1, 'b': 2, 'd': 1, 'e': 2}
